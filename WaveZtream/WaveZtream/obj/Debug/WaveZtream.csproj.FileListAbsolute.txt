@@ -1,0 +1,11 @@
+C:\Users\Piotr\Desktop\audiostreamer2\WaveZtream\WaveZtream\bin\Debug\WaveZtream.exe.config
+C:\Users\Piotr\Desktop\audiostreamer2\WaveZtream\WaveZtream\bin\Debug\WaveZtream.exe
+C:\Users\Piotr\Desktop\audiostreamer2\WaveZtream\WaveZtream\bin\Debug\WaveZtream.pdb
+C:\Users\Piotr\Desktop\audiostreamer2\WaveZtream\WaveZtream\obj\Debug\WaveZtream.csproj.AssemblyReference.cache
+C:\Users\Piotr\Desktop\audiostreamer2\WaveZtream\WaveZtream\obj\Debug\WaveZtream.csproj.SuggestedBindingRedirects.cache
+C:\Users\Piotr\Desktop\audiostreamer2\WaveZtream\WaveZtream\obj\Debug\WaveZtream.Form1.resources
+C:\Users\Piotr\Desktop\audiostreamer2\WaveZtream\WaveZtream\obj\Debug\WaveZtream.Properties.Resources.resources
+C:\Users\Piotr\Desktop\audiostreamer2\WaveZtream\WaveZtream\obj\Debug\WaveZtream.csproj.GenerateResource.cache
+C:\Users\Piotr\Desktop\audiostreamer2\WaveZtream\WaveZtream\obj\Debug\WaveZtream.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\Desktop\audiostreamer2\WaveZtream\WaveZtream\obj\Debug\WaveZtream.exe
+C:\Users\Piotr\Desktop\audiostreamer2\WaveZtream\WaveZtream\obj\Debug\WaveZtream.pdb
