@@ -46,16 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Initializer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Initializer.Designer.cs">
+      <DependentUpon>Initializer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Initializer_Welcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Initializer_Welcome.Designer.cs">
+      <DependentUpon>Initializer_Welcome.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Initializer.resx">
+      <DependentUpon>Initializer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Initializer_Welcome.resx">
+      <DependentUpon>Initializer_Welcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,6 +97,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WAVEZTREAM_SHINEWHITE.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonBackground_Default.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -63,6 +63,26 @@ namespace WaveZtream.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buttonBackground_Default {
+            get {
+                object obj = ResourceManager.GetObject("buttonBackground_Default", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap help_icon {
+            get {
+                object obj = ResourceManager.GetObject("help_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap waveztream_legacylogo {
             get {
                 object obj = ResourceManager.GetObject("waveztream_legacylogo", resourceCulture);
