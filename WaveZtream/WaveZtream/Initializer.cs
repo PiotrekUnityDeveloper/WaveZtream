@@ -14,6 +14,7 @@ namespace WaveZtream
     public partial class Initializer : Form
     {
         public static Initializer activeInitializer;
+        private UserControl currentPage = null;
 
         public Initializer()
         {
@@ -75,6 +76,7 @@ namespace WaveZtream
             LoadingMessage.BringToFront();
             init_welcome.Location = new Point(0, 0);
             this.Controls.Add(init_welcome);
+            currentPage = init_welcome;
             init_welcome.Show();
             WindowsExtender.Start();
         }
@@ -117,6 +119,36 @@ namespace WaveZtream
                     this.CenterToScreen();
                     WindowsExtender.Stop();
                 }
+            }
+        }
+
+        public void SwitchPage(int pageID)
+        {
+            this.Controls.Remove(currentPage);
+            currentPage.Dispose();
+
+            /// 0 = no page
+            /// 1 = first time launch
+            /// 2 = multiple account manager
+            /// 3 = single account manager
+
+            switch (pageID)
+            {
+                case 0:
+                    break;
+                case 1:
+                    RunFirstTimeInstallation();
+                    break;
+                case 2:
+                    Initializer_MultipleAccountSetup init_macc = new Initializer_MultipleAccountSetup();
+                    this.Controls.Add(init_macc);
+                    init_macc.Show();
+                    init_macc.SendToBack();
+                    currentPage = init_macc;
+                    break;
+                case 3:
+                    //not implemented yet
+                    break;
             }
         }
     }

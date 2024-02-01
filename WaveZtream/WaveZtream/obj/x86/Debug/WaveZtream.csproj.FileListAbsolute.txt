@@ -1,0 +1,15 @@
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x86\Debug\WaveZtream.exe.config
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x86\Debug\WaveZtream.exe
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x86\Debug\WaveZtream.pdb
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.csproj.AssemblyReference.cache
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.csproj.SuggestedBindingRedirects.cache
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.Control_StringList.resources
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.Initializer.resources
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.Initializer_MultipleAccountSetup.resources
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.Initializer_Welcome.resources
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.Properties.Resources.resources
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.StringItem.resources
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.csproj.GenerateResource.cache
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.exe
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.pdb
