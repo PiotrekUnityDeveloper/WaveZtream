@@ -83,6 +83,16 @@ namespace WaveZtream.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap peakpx_default {
+            get {
+                object obj = ResourceManager.GetObject("peakpx_default", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap waveztream_legacylogo {
             get {
                 object obj = ResourceManager.GetObject("waveztream_legacylogo", resourceCulture);
