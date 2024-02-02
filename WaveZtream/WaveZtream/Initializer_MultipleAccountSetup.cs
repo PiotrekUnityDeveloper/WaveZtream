@@ -21,6 +21,12 @@ namespace WaveZtream
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Initializer.activeInitializer.createdAccounts = control_StringList1.GetCreatedAccounts();
+            Initializer.activeInitializer.SwitchPage(3);
+        }
     }
 
     public class AccountItem

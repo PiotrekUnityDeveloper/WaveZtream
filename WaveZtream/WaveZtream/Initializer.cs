@@ -16,6 +16,8 @@ namespace WaveZtream
         public static Initializer activeInitializer;
         private UserControl currentPage = null;
 
+        public List<AccountItem> createdAccounts = new List<AccountItem>();
+
         public Initializer()
         {
             InitializeComponent();
@@ -130,7 +132,7 @@ namespace WaveZtream
             /// 0 = no page
             /// 1 = first time launch
             /// 2 = multiple account manager
-            /// 3 = single account manager
+            /// 3 = multiple account editor
 
             switch (pageID)
             {
@@ -140,6 +142,8 @@ namespace WaveZtream
                     RunFirstTimeInstallation();
                     break;
                 case 2:
+                    if(currentPage != null) { this.Controls.Remove(currentPage); }
+                    if (currentPage != null) { currentPage.Dispose(); }
                     Initializer_MultipleAccountSetup init_macc = new Initializer_MultipleAccountSetup();
                     this.Controls.Add(init_macc);
                     init_macc.Show();
@@ -147,7 +151,13 @@ namespace WaveZtream
                     currentPage = init_macc;
                     break;
                 case 3:
-                    //not implemented yet
+                    if (currentPage != null) { this.Controls.Remove(currentPage); }
+                    if (currentPage != null) { currentPage.Dispose(); }
+                    Initializer_MainAccountEditor init_maed = new Initializer_MainAccountEditor();
+                    this.Controls.Add(init_maed);
+                    init_maed.Show();
+                    init_maed.SendToBack();
+                    currentPage = init_maed;
                     break;
             }
         }

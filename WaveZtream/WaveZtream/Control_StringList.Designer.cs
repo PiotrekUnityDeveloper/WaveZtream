@@ -96,6 +96,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Control_StringList";
             this.Size = new System.Drawing.Size(364, 262);
+            this.Load += new System.EventHandler(this.Control_StringList_Load);
             this.ResumeLayout(false);
 
         }

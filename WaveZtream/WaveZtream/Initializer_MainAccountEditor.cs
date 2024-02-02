@@ -16,5 +16,18 @@ namespace WaveZtream
         {
             InitializeComponent();
         }
+
+        private void Initializer_MainAccountEditor_Load(object sender, EventArgs e)
+        {
+            InitAccounts();
+        }
+
+        private void InitAccounts()
+        {
+            foreach(AccountItem accitem in Initializer.activeInitializer.createdAccounts)
+            {
+                control_AccountEditor1.AddNewTab(accitem);
+            }
+        }
     }
 }

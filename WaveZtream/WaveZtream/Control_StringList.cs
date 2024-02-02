@@ -73,5 +73,22 @@ namespace WaveZtream
         {
             panel1.Location = new Point(panel1.Location.X, 3 - vScrollBar1.Value);
         }
+
+        private void Control_StringList_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public List<AccountItem> GetCreatedAccounts()
+        {
+            List<AccountItem> accounts = new List<AccountItem>();
+
+            foreach(StringItem item in userAccounts)
+            {
+                accounts.Add(new AccountItem { accountName = item.GetAccountItem().accountName, accountImage = item.GetAccountItem().accountImage, accountType = item.GetAccountItem().accountType });
+            }
+
+            return accounts;
+        }
     }
 }

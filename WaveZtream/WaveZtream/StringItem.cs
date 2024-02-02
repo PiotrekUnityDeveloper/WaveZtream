@@ -74,5 +74,10 @@ namespace WaveZtream
             comboBox1.Show();
             label2.Hide();
         }
+
+        public AccountItem GetAccountItem()
+        {
+            return new AccountItem { accountName = textBox1.Text, accountImage = pictureBox1.Image, accountType = (AccountType)Enum.Parse(typeof(AccountType), label2.Text)};
+        }
     }
 }
