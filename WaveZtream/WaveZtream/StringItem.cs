@@ -47,5 +47,32 @@ namespace WaveZtream
             rnd = new Random();
             textBox1.Text = randomAccountNames[rnd.Next(0, randomAccountNames.Length - 1)].Replace("X", rnd.Next(000000, 999999).ToString());
         }
+
+        private void StringItem_MouseEnter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void StringItem_MouseLeave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label2.Text = comboBox1.SelectedItem.ToString();
+        }
+
+        private void comboBox1_MouseLeave(object sender, EventArgs e)
+        {
+            comboBox1.Hide();
+            label2.Show();
+        }
+
+        private void label2_MouseEnter(object sender, EventArgs e)
+        {
+            comboBox1.Show();
+            label2.Hide();
+        }
     }
 }

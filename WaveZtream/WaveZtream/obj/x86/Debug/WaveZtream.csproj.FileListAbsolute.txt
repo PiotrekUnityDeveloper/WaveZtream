@@ -13,3 +13,5 @@ C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.csproj.CoreCompileInputs.cache
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.exe
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.pdb
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.Initializer_MainAccountEditor.resources
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x86\Debug\WaveZtream.Control_AccountEditor.resources

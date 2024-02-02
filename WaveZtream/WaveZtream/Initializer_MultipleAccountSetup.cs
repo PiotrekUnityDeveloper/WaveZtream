@@ -16,5 +16,26 @@ namespace WaveZtream
         {
             InitializeComponent();
         }
+
+        private void Initializer_MultipleAccountSetup_Load(object sender, EventArgs e)
+        {
+
+        }
     }
+
+    public class AccountItem
+    {
+        public string accountName { get; set; }
+        public Image accountImage { get; set; }
+        public AccountType accountType { get; set; }
+    }
+}
+
+public enum AccountType
+{
+    Admin,
+    User,
+    Guest,
+    Temp,
+    Limited,
 }

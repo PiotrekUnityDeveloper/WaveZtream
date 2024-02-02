@@ -106,6 +106,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control_AccountEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_AccountEditor.Designer.cs">
+      <DependentUpon>Control_AccountEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control_StringList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +123,12 @@
     </Compile>
     <Compile Include="Initializer.Designer.cs">
       <DependentUpon>Initializer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Initializer_MainAccountEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Initializer_MainAccountEditor.Designer.cs">
+      <DependentUpon>Initializer_MainAccountEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Initializer_MultipleAccountSetup.cs">
       <SubType>UserControl</SubType>
@@ -138,11 +150,17 @@
     <Compile Include="StringItem.Designer.cs">
       <DependentUpon>StringItem.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Control_AccountEditor.resx">
+      <DependentUpon>Control_AccountEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control_StringList.resx">
       <DependentUpon>Control_StringList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Initializer.resx">
       <DependentUpon>Initializer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Initializer_MainAccountEditor.resx">
+      <DependentUpon>Initializer_MainAccountEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Initializer_MultipleAccountSetup.resx">
       <DependentUpon>Initializer_MultipleAccountSetup.cs</DependentUpon>
