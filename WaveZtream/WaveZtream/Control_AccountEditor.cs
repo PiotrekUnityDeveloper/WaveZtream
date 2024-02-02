@@ -36,7 +36,7 @@ namespace WaveZtream
             };
 
             buttonTab.Click += (e, sender) => { OpenTab(buttonTab.Text); };
-            buttonTab.BackgroundImage = WaveZtream.Properties.Resources.waveztream_legacylogo;
+            buttonTab.BackgroundImage = WaveZtream.Properties.Resources.buttonBackground_Default;
             buttonTab.BackgroundImageLayout = ImageLayout.Stretch;
             buttonTab.ForeColor = Color.White;
             buttonTab.Font = new Font("Arial", 8);
@@ -69,11 +69,61 @@ namespace WaveZtream
             accountNameBox.ForeColor = Color.Lime;
             accountNameBox.Font = new Font("Arial", 18);
 
+            accountNameBox.TextChanged += (e, sender) =>
+            {
+                buttonTab.Text = accountNameBox.Text;
+                GetTabByPage(panelTab).tabName = buttonTab.Text;
+            };
+
+            //account type combobox
+            ComboBox accountTypeComboBox = new ComboBox();
+            accountTypeComboBox.Items.Clear();
+            accountTypeComboBox.Items.Add("Admin");
+            accountTypeComboBox.Items.Add("User");
+            accountTypeComboBox.Items.Add("Guest");
+            accountTypeComboBox.Items.Add("Temp");
+            accountTypeComboBox.Items.Add("Limited");
+            accountTypeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            accountTypeComboBox.SelectedItem = accountType.ToString();
+            accountTypeComboBox.FlatStyle = FlatStyle.Popup;
+            accountTypeComboBox.ForeColor = Color.White;
+            accountTypeComboBox.BackColor = Color.FromArgb(15, 15, 15);
+            accountTypeComboBox.Location = new Point(86, 44);
+            accountTypeComboBox.Size = new Size(60, accountTypeComboBox.Size.Height);
+            Label accountTypeLabel = new Label();
+            accountTypeLabel.Text = accountType.ToString();
+            accountTypeLabel.Font = new Font("Arial", 10);
+            accountTypeLabel.ForeColor = Color.White;
+            accountTypeLabel.Location = new Point(90, 42);
+            accountTypeLabel.Size = new Size(70, accountTypeLabel.Size.Height);
+
+            accountTypeComboBox.SelectedIndexChanged += (e, sender) =>
+            {
+                accountTypeLabel.Text = accountTypeComboBox.SelectedItem.ToString();
+                accountTypeLabel.Show();
+                accountTypeComboBox.Hide();
+            };
+            accountTypeComboBox.MouseLeave += (e, sender) =>
+            {
+                accountTypeLabel.Show();
+                accountTypeComboBox.Hide();
+            };
+            accountTypeLabel.MouseEnter += (e, sender) =>
+            {
+                accountTypeLabel.Hide();
+                accountTypeComboBox.Show();
+            };
+
             //add the created controls to the content panel, and show them
-            panelTab.Controls.Add(accountImageBox);
-            panelTab.Controls.Add(accountNameBox);
+            panelTab.Controls.Add(accountImageBox); // 1
+            panelTab.Controls.Add(accountNameBox); // 2
+            panelTab.Controls.Add(accountTypeComboBox); // 3
+            panelTab.Controls.Add(accountTypeLabel); // 4
             accountImageBox.Show();
             accountNameBox.Show();
+            accountTypeLabel.Show();
+            //accountTypeComboBox.Show(); not shown by default
+            accountTypeComboBox.Hide();
 
             //added configuration settings to the panel, continue
 
@@ -123,6 +173,21 @@ namespace WaveZtream
 
             // Create and return a Color object
             return Color.FromArgb(red, green, blue);
+        }
+
+        private ButtonTab GetTabByPage(Panel tabPage)
+        {
+            ButtonTab btntab = null;
+            foreach(ButtonTab tab in tabs)
+            {
+                if(tab.tabPage == tabPage)
+                {
+                    btntab = tab;
+                    break;
+                }
+            }
+
+            return btntab;
         }
     }
 
