@@ -45,7 +45,14 @@ namespace WaveZtream
             buttonTab.Text = accountName;
             buttonTab.FlatStyle = FlatStyle.Popup;
             buttonTab.Location = new Point(0, tabs.Count * buttonTab.Height);
+            buttonTab.SendToBack();
             tabList.Controls.Add(buttonTab);
+            tabList.Height = tabList.Controls.Count * buttonTab.Height;
+
+            if(tabList.Controls.Count > 10)
+            {
+                scrolldown.Show();
+            }
 
             // Initialize new page
             Panel panelTab = new Panel();
@@ -147,17 +154,39 @@ namespace WaveZtream
 
         private void OpenTab(string tabName)
         {
+            int foundPages = 0;
             foreach (ButtonTab btntab in tabs)
             {
                 if (btntab.tabName == tabName)
                 {
+                    foundPages++;
                     btntab.tabPage.Show();
-                    btntab.tabButton.ForeColor = Color.Lime;
+                    if(foundPages > 1)
+                    {
+                        btntab.tabButton.ForeColor = Color.Red;
+                        MarkDuplicateTabs(tabName);
+                        break;
+                    }
+                    else
+                    {
+                        btntab.tabButton.ForeColor = Color.Lime;
+                    }
                 }
                 else
                 {
                     btntab.tabPage.Hide();
                     btntab.tabButton.ForeColor = Color.White;
+                }
+            }
+        }
+
+        private void MarkDuplicateTabs(string tabName)
+        {
+            foreach (ButtonTab btntab in tabs)
+            {
+                if (btntab.tabName == tabName)
+                {
+                    btntab.tabButton.ForeColor = Color.Red;
                 }
             }
         }
@@ -188,6 +217,33 @@ namespace WaveZtream
             }
 
             return btntab;
+        }
+
+        private void contentList_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void scrolldown_Click(object sender, EventArgs e)
+        {
+            tabList.Location = new Point(tabList.Location.X, tabList.Location.Y - (8 * 23));
+            scrollup.Show();
+
+            if(tabList.Location.Y <= (3 - tabList.Controls.Count * 23))
+            {
+                scrolldown.Hide();
+            }
+        }
+
+        private void scrollup_Click(object sender, EventArgs e)
+        {
+            tabList.Location = new Point(tabList.Location.X, tabList.Location.Y + (8 * 23));
+            scrolldown.Show();
+
+            if (tabList.Location.Y >= 3)
+            {
+                scrollup.Hide();
+            }
         }
     }
 
