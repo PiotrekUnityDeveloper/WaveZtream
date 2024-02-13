@@ -134,6 +134,7 @@ namespace WaveZtream
 
             //added configuration settings to the panel, continue
 
+            //Label pathName = new Label();
 
 
             panelTab.Dock = DockStyle.Fill;
