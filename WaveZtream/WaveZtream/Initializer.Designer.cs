@@ -47,6 +47,7 @@
             this.LoadingMessage.Text = "INITIALIZING...";
             this.LoadingMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LoadingMessage.Visible = false;
+            this.LoadingMessage.Click += new System.EventHandler(this.LoadingMessage_Click);
             // 
             // WindowsExtender
             // 

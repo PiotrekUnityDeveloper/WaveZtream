@@ -27,7 +27,10 @@ namespace WaveZtream
         private void Form1_Load(object sender, EventArgs e)
         {
             this.TransparencyKey = Color.Black;
-            Initialize();
+            MusicPanel musicPanel = new MusicPanel();
+            musicPanel.Show();
+            this.Hide();
+            //Initialize();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -160,6 +163,11 @@ namespace WaveZtream
                     currentPage = init_maed;
                     break;
             }
+        }
+
+        private void LoadingMessage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
