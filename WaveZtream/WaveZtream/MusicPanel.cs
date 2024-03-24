@@ -1,4 +1,5 @@
 ﻿using BrightIdeasSoftware;
+using NAudio.Utils;
 using NAudio.Wave;
 using System;
 using System.Collections.Generic;
@@ -16,15 +17,21 @@ namespace WaveZtream
 {
     public partial class MusicPanel : Form
     {
+        public static MusicPanel instance;
+        public static ObjectListView objlistview;
+
         public MusicPanel()
         {
             InitializeComponent();
+            instance = this;
+            objlistview = objectListView1;
         }
 
-        private static string[] musicLocation = { "C:\\Users\\Piotr\\Desktop\\Music", "C:\\Users\\Piotr\\Documents\\AudioStreamer\\library\\audio_only" };
+        public static string[] musicLocation = { "C:\\Users\\Piotr\\Desktop\\Music", "C:\\Users\\Piotr\\Desktop\\jakies guwno" };
         public static List<AudioDefinition> audioFiles = new List<AudioDefinition>();
         public static MetadataHadlingMode metaHandling = MetadataHadlingMode.TrySeparate;
         public static List<Image> covers = new List<Image>();
+        public static AudioDefinition currentDefinition = null;
 
         private void MusicPanel_Load(object sender, EventArgs e)
         {
@@ -41,162 +48,7 @@ namespace WaveZtream
                 item.HeaderFormatStyle = headerstyle;
             }
 
-            await GetAudioFiles(musicLocation.ToList());
-        }
-
-        public async Task GetAudioFiles(List<string> filePaths)
-        {
-            await Task.Run(() => { 
-
-                int index = 0;
-
-                foreach (string s in musicLocation)
-                {
-                    foreach (string file in Directory.GetFiles(s, "*.mp3"))
-                    {
-                        //  Structure the audio definition here
-
-                        string title = "";
-                        string artists = "";
-                        string albumartists = "";
-                        string primaryartist = "";
-                        string album = "";
-                        Image audioCover = null;
-
-                        bool wasseparated = false;
-                        bool usesmeta = true;
-
-                        try
-                        {
-                            TagLib.File audioFile = TagLib.File.Create(file);
-
-                            if (String.IsNullOrWhiteSpace(audioFile.Tag.Title))
-                            {
-                                title = Path.GetFileNameWithoutExtension(file);
-                            }
-                            else
-                            {
-                                title = audioFile.Tag.Title;
-                            }
-
-                            if (String.IsNullOrWhiteSpace(string.Join(", ", audioFile.Tag.Performers)))
-                            {
-                                artists = "-";
-                            }
-                            else
-                            {
-                                artists = string.Join(", ", audioFile.Tag.Performers);
-                            }
-
-                            try
-                            {
-                                MemoryStream ms = new MemoryStream(audioFile.Tag.Pictures[0].Data.Data);
-                                System.Drawing.Image image = System.Drawing.Image.FromStream(ms);
-                                audioCover = image;
-
-                                this.Invoke((MethodInvoker)delegate
-                                {
-                                    ShowCurrentCover(image);
-                                });
-
-                                covers.Add(image);
-                            }
-                            catch { }
-                        }
-                        catch (Exception ex)
-                        {
-                            usesmeta = false;
-
-                            if(metaHandling == MetadataHadlingMode.CopyFileName)
-                            {
-                                title = Path.GetFileNameWithoutExtension(file);
-                                artists = "-";
-                            }
-                            else if(metaHandling == MetadataHadlingMode.TrySeparate)
-                            {
-                                wasseparated = true;
-
-                                string nameToSep = Path.GetFileNameWithoutExtension(file);
-                                string[] nameSep = nameToSep.Split('-');
-                                if(nameSep.Count() > 1 && nameSep.Count() < 3)
-                                {
-                                    // there is an '-'
-                                    artists = nameSep[0];
-                                    title = nameSep[1];
-                                }
-                                else if (nameSep.Count() > 1)
-                                {
-                                    // there are multiple '-', we should probably skip the third part of the separation.
-                                    // but im going to leave it here
-                                    // maybe thats a thing to add to the settings, idk
-                                    artists = nameSep[0];
-                                    title = nameSep[1];
-                                }
-                                else if(nameSep.Count() == 1)
-                                {
-                                    // there is probably only the title
-                                    title = nameSep[0];
-                                    artists = "-";
-                                }
-
-                                // artist is usually first, so assume the first string is an artist
-                                // unless there is a single artist, then they probably put their names after the title
-                                // what do i know, name your files correctly, kids.
-                            }
-                        }
-
-                        if(audioCover == null)
-                        {
-                            //switch with a default image which i dont have any atm
-                        }
-
-                        audioFiles.Add(new AudioDefinition { audioFileName = Path.GetFileName(file), 
-                                                             audioTitle = title, 
-                                                             audioArtists = artists, 
-                                                             //misc
-                                                             usesMeta = usesmeta, 
-                                                             wasSeparated = wasseparated,
-                                                             index = index });
-
-                        index++;
-
-                        //Console.WriteLine($"Found an MP3 file: {file}");
-                    }
-                }
-
-                titleColumn.ImageAspectName = "audioCover"; // Specify the aspect name for images
-                
-                objectListView1.SetObjects(audioFiles);
-                //titleColumn.ImageAspectName = "covers";
-
-                this.Invoke((MethodInvoker)delegate
-                {
-                    LoadCoverImages();
-                });
-
-            });
-        }
-
-        public void LoadCoverImages()
-        {
-            ImageList smallImageList = new ImageList();
-            smallImageList.ImageSize = new Size(16, 16);
-            smallImageList.Images.AddRange(covers.ToArray());
-            objectListView1.SmallImageList = smallImageList;
-            covers.Clear();
-
-            titleColumn.ImageIndex = 0;
-            for (int i = 0; i < objectListView1.Items.Count; i++)
-            {
-                objectListView1.Items[i].ImageIndex = i;
-            }
-
-            objectListView1.Refresh();
-        }
-
-        public void ShowCurrentCover(Image img)
-        {
-            pictureBox1.Image = img;
+            await LibraryManager.GetAudioFiles(musicLocation.ToList());
         }
 
         private void sld_AudioPosition_Click(object sender, EventArgs e)
@@ -211,12 +63,67 @@ namespace WaveZtream
 
         private void objectListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            currentDefinition = LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text));
+            PlaybackManager.PlayAudio(LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text)));
+        }
 
+        public void InitializeSong(int maxLength)
+        {
+            lab_audioTitle.Text = currentDefinition.audioTitle;
+            lab_audioArtists.Text = currentDefinition.audioArtists;
+            if(currentDefinition.audioCover != null) pic_audioImage.Image = currentDefinition.audioCover;
+
+            sld_audioPosition.Minimum = 0;
+            sld_audioPosition.Value = 0;
+            sld_audioPosition.Maximum = maxLength + 1;
+
+            if (audioUpdate.Enabled == false) audioUpdate.Start();
+        }
+
+        public void UpdateTrackPosition()
+        {
+            if (PlaybackManager.audioHandler != null && PlaybackManager.audioHandler.PlaybackState == PlaybackState.Playing)
+            {
+                int val = (int)(PlaybackManager.positionOffset + PlaybackManager.audioHandler.GetPositionTimeSpan().TotalMilliseconds);
+                if(val <= sld_audioPosition.Maximum)
+                {
+                    sld_audioPosition.Value = val;
+                }
+            }
+        }
+
+        private void audioUpdate_Tick(object sender, EventArgs e)
+        {
+            UpdateTrackPosition();
+        }
+
+        private void kryptonTrackBar1_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonTrackBar1_MouseDown(object sender, MouseEventArgs e)
+        {
+            audioUpdate.Stop();
+        }
+
+        private void kryptonTrackBar1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if(audioUpdate.Enabled == false && e.Button == MouseButtons.Right)
+            {
+                audioUpdate.Start();
+            }
+            else
+            {
+                PlaybackManager.ChangePosition(sld_audioPosition.Value);
+
+                audioUpdate.Start();
+            }
         }
     }
 

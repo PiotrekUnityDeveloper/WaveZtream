@@ -69,3 +69,7 @@ C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x86\Debug\System.Sec
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x86\Debug\TagLibSharp.dll
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x86\Debug\TagLibSharp.pdb
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x86\Debug\TagLibSharp.xml
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x86\Debug\NAudio.Extras.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x86\Debug\NAudio.Flac.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x86\Debug\NAudio.WindowsMediaFormat.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x86\Debug\NAudio.Extras.xml
