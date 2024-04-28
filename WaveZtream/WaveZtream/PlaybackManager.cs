@@ -1,4 +1,5 @@
 ﻿using Accord.Statistics.Kernels;
+using NAudio.Gui;
 using NAudio.Wave;
 using System;
 using System.Collections.Generic;
@@ -90,5 +91,18 @@ namespace WaveZtream
         {
             audioHandler?.Play();
         }
+
+        public static void ReplayAudio()
+        {
+            positionOffset = 0;
+            AudioFileReader audioFileReader = new AudioFileReader(usedAudioDef.audioFilePath);
+            long desiredPositionInBytes = (long)(0 * (audioFileReader.WaveFormat.AverageBytesPerSecond / 1000.0));
+            audioFileReader.Position = desiredPositionInBytes;
+            audioHandler.Stop();
+            audioHandler.Init(audioFileReader);
+            audioHandler.Play();
+        }
+
+
     }
 }

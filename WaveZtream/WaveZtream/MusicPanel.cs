@@ -58,7 +58,7 @@ namespace WaveZtream
 
         private void kryptonPictureBox2_Click(object sender, EventArgs e)
         {
-
+            PlaybackManager.ReplayAudio();
         }
 
         private void objectListView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -124,6 +124,26 @@ namespace WaveZtream
 
                 audioUpdate.Start();
             }
+        }
+
+        private void kryptonPictureBox3_Click(object sender, EventArgs e)
+        {
+            PlaybackManager.PauseAudio();
+        }
+
+        private void kryptonPictureBox1_Click(object sender, EventArgs e)
+        {
+            PlaybackManager.ResumeAudio();
+        }
+
+        private void sld_audioPosition_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonPictureBox5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

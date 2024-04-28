@@ -58,7 +58,6 @@ C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\System.Sec
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\TagLibSharp.pdb
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\TagLibSharp.xml
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.csproj.AssemblyReference.cache
-C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.csproj.SuggestedBindingRedirects.cache
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.Control_AccountEditor.resources
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.Control_StringList.resources
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.Initializer.resources
@@ -70,6 +69,6 @@ C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.StringItem.resources
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.csproj.GenerateResource.cache
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.csproj.CoreCompileInputs.cache
-C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.csproj.CopyComplete
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.exe
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.pdb
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.csproj.Up2Date
