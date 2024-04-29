@@ -12,6 +12,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Telerik.WinControls.UI.Docking;
 
 namespace WaveZtream
 {
@@ -27,7 +28,7 @@ namespace WaveZtream
             objlistview = objectListView1;
         }
 
-        public static string[] musicLocation = { "C:\\Users\\Piotr\\Desktop\\Music", "C:\\Users\\Piotr\\Desktop\\jakies guwno" };
+        public static string[] musicLocation = { "C:\\Users\\Piotr\\Desktop\\Music",};
         public static List<AudioDefinition> audioFiles = new List<AudioDefinition>();
         public static MetadataHadlingMode metaHandling = MetadataHadlingMode.TrySeparate;
         public static List<Image> covers = new List<Image>();

@@ -72,3 +72,12 @@ C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.exe
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.pdb
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.csproj.Up2Date
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.RadDock.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.Themes.FluentDark.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.UI.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\TelerikCommon.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.xml
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.RadDock.xml
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.UI.xml
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.exe.licenses
