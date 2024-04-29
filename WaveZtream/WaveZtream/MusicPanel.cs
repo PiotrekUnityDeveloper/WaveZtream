@@ -39,19 +39,21 @@ namespace WaveZtream
         {
             Start();
 
+            radDock1.Dock = DockStyle.Fill;
+
             // My Audio Window
             DocumentWindow myAudio = new DocumentWindow();
             radDock1.AddDocument(myAudio);
             myAudio.Show();
-            myAudio.Controls.Add(objectListView1);
+            myAudio.Controls.Add(kryptonPanel5);
             myAudio.Controls.Add(button1);
             myAudio.Text = "My Audio";
             myAudio.BackColor = Color.Black;
             //myAudio.Width = objectListView1.Width;
-            int myAudioWidth = objectListView1.Width;
-            objectListView1.Parent = myAudio;
-            objectListView1.Location = new Point(0, 0);
-            objectListView1.Dock = DockStyle.Fill;
+            int myAudioWidth = kryptonPanel5.Width;
+            kryptonPanel5.Parent = myAudio;
+            kryptonPanel5.Location = new Point(0, 0);
+            kryptonPanel5.Dock = DockStyle.Fill;
             button1.BringToFront();
 
             // Playback Manager Window
@@ -68,7 +70,7 @@ namespace WaveZtream
             myAudio.DockState = DockState.Docked;
             myAudio.DockManager.Dock = DockStyle.Left;
             //myAudio.Width = myAudioWidth;
-            playbackManager.TabStrip.SizeInfo.AbsoluteSize = new Size(myAudioWidth, playbackManager.TabStrip.SizeInfo.AbsoluteSize.Height);
+            //playbackManager.TabStrip.SizeInfo.AbsoluteSize = new Size(myAudioWidth, playbackManager.TabStrip.SizeInfo.AbsoluteSize.Height);
             //myAudio.DockManager.Width = myAudioWidth;
 
             playbackManager.DockState = DockState.Docked;
