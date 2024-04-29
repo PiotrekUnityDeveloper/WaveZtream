@@ -67,15 +67,20 @@ namespace WaveZtream
             int playbackManagerWidth = kryptonPanel1.Width;
             kryptonPanel1.Dock = DockStyle.Fill;
 
-            myAudio.DockState = DockState.Docked;
-            myAudio.DockManager.Dock = DockStyle.Left;
+            //myAudio.DockManager.Dock = DockStyle.Left;
+            //myAudio.DockState = DockState.Docked;
             //myAudio.Width = myAudioWidth;
             //playbackManager.TabStrip.SizeInfo.AbsoluteSize = new Size(myAudioWidth, playbackManager.TabStrip.SizeInfo.AbsoluteSize.Height);
             //myAudio.DockManager.Width = myAudioWidth;
 
-            playbackManager.DockState = DockState.Docked;
-            playbackManager.DockManager.Dock = DockStyle.Right;
+            //playbackManager.DockState = DockState.Docked;
+            //playbackManager.DockManager.Dock = DockStyle.Right;
             //playbackManager.DockManager.Width = playbackManagerWidth;
+
+            this.radDock1.DockWindow(myAudio, DockPosition.Left);
+            this.radDock1.DockWindow(playbackManager, DockPosition.Right);
+            myAudio.TabStrip.SizeInfo.SizeMode = SplitPanelSizeMode.Relative;
+            myAudio.TabStrip.SizeInfo.RelativeRatio = new SizeF(0.43f, 0);
         }
 
         public async void Start()
@@ -182,6 +187,21 @@ namespace WaveZtream
         }
 
         private void kryptonPictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonContextMenu1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void playNextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fixIssuesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

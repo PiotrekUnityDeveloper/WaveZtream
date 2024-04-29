@@ -74,6 +74,62 @@
             this.kryptonDockableNavigator2 = new Krypton.Docking.KryptonDockableNavigator();
             this.kryptonPage3 = new Krypton.Navigator.KryptonPage();
             this.kryptonPage4 = new Krypton.Navigator.KryptonPage();
+            this.kryptonPage5 = new Krypton.Navigator.KryptonPage();
+            this.objectListView2 = new BrightIdeasSoftware.ObjectListView();
+            this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn3 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn4 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.loadAudioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playAudioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.addToMainQueueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToAudioPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playNextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.addToMainQueueAndStopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToCustomQueueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createANewQueueAndAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addAllSongsFromThisArtistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addAllFromMasterPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.fixIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.audioRecommendationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.audioToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.videoToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trimAudioFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cutoutAudioFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.splitAudioFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.normalizeAudioLevelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setChannelToStereoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setChannelToMonoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mergeChannelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.audioToolsManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.conversionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openConversionManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.convertAudioToMP3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.convertAudioToWAVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.convertAudioToOGGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.convertAudioToFLACToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.convertAudioToM4AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.tieAMusicVideoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDockableNavigator1)).BeginInit();
             this.kryptonDockableNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
@@ -106,6 +162,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage3)).BeginInit();
             this.kryptonPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage5)).BeginInit();
+            this.kryptonPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView2)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonDockableNavigator1
@@ -451,7 +511,8 @@
             this.kryptonDockableNavigator2.PageBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlClient;
             this.kryptonDockableNavigator2.Pages.AddRange(new Krypton.Navigator.KryptonPage[] {
             this.kryptonPage3,
-            this.kryptonPage4});
+            this.kryptonPage4,
+            this.kryptonPage5});
             this.kryptonDockableNavigator2.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007BlackDarkMode;
             this.kryptonDockableNavigator2.SelectedIndex = 0;
             this.kryptonDockableNavigator2.Size = new System.Drawing.Size(443, 619);
@@ -483,6 +544,446 @@
             this.kryptonPage4.Text = "My Library";
             this.kryptonPage4.ToolTipTitle = "Page ToolTip";
             this.kryptonPage4.UniqueName = "a636a1d5e8f34f1a900201b31e6c06ae";
+            // 
+            // kryptonPage5
+            // 
+            this.kryptonPage5.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage5.Controls.Add(this.objectListView2);
+            this.kryptonPage5.Flags = 65534;
+            this.kryptonPage5.LastVisibleSet = true;
+            this.kryptonPage5.MinimumSize = new System.Drawing.Size(150, 50);
+            this.kryptonPage5.Name = "kryptonPage5";
+            this.kryptonPage5.Size = new System.Drawing.Size(441, 592);
+            this.kryptonPage5.Text = "Queue";
+            this.kryptonPage5.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage5.UniqueName = "769baf4b03904f3e8234fe3147aa4c50";
+            // 
+            // objectListView2
+            // 
+            this.objectListView2.AllColumns.Add(this.olvColumn1);
+            this.objectListView2.AllColumns.Add(this.olvColumn2);
+            this.objectListView2.AllColumns.Add(this.olvColumn3);
+            this.objectListView2.AllColumns.Add(this.olvColumn4);
+            this.objectListView2.AllColumns.Add(this.fileExtension);
+            this.objectListView2.BackColor = System.Drawing.Color.Black;
+            this.objectListView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.olvColumn1,
+            this.olvColumn2,
+            this.olvColumn3,
+            this.olvColumn4});
+            this.objectListView2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objectListView2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.objectListView2.ForeColor = System.Drawing.Color.DarkGray;
+            this.objectListView2.FullRowSelect = true;
+            this.objectListView2.HideSelection = false;
+            this.objectListView2.LabelWrap = false;
+            this.objectListView2.Location = new System.Drawing.Point(0, 0);
+            this.objectListView2.Name = "objectListView2";
+            this.objectListView2.ShowGroups = false;
+            this.objectListView2.ShowImagesOnSubItems = true;
+            this.objectListView2.ShowItemToolTips = true;
+            this.objectListView2.Size = new System.Drawing.Size(441, 529);
+            this.objectListView2.TabIndex = 4;
+            this.objectListView2.UseCompatibleStateImageBehavior = false;
+            this.objectListView2.UseHyperlinks = true;
+            this.objectListView2.View = System.Windows.Forms.View.Details;
+            // 
+            // olvColumn1
+            // 
+            this.olvColumn1.AspectName = "index";
+            this.olvColumn1.ImageAspectName = "audioCover";
+            this.olvColumn1.Text = "#";
+            this.olvColumn1.Width = 43;
+            // 
+            // olvColumn2
+            // 
+            this.olvColumn2.AspectName = "audioTitle";
+            this.olvColumn2.ImageAspectName = "";
+            this.olvColumn2.Text = "Title";
+            this.olvColumn2.Width = 281;
+            // 
+            // olvColumn3
+            // 
+            this.olvColumn3.AspectName = "audioArtists";
+            this.olvColumn3.Text = "Artist";
+            // 
+            // olvColumn4
+            // 
+            this.olvColumn4.AspectName = "audioFileName";
+            this.olvColumn4.Text = "File Name";
+            this.olvColumn4.Width = 94;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loadAudioToolStripMenuItem,
+            this.playAudioToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.playNextToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.toolStripMenuItem1,
+            this.addToMainQueueToolStripMenuItem,
+            this.addToCustomQueueToolStripMenuItem,
+            this.addToAudioPlaylistToolStripMenuItem,
+            this.addToMainQueueAndStopToolStripMenuItem,
+            this.createANewQueueAndAddToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.toolStripMenuItem3,
+            this.addToolStripMenuItem,
+            this.addAllSongsFromThisArtistToolStripMenuItem,
+            this.addAllFromMasterPlaylistToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.toolStripMenuItem4,
+            this.fixIssuesToolStripMenuItem,
+            this.audioRecommendationsToolStripMenuItem,
+            this.toolStripSeparator5,
+            this.toolStripMenuItem2,
+            this.audioToolsToolStripMenuItem,
+            this.videoToolsToolStripMenuItem,
+            this.conversionToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(243, 480);
+            // 
+            // loadAudioToolStripMenuItem
+            // 
+            this.loadAudioToolStripMenuItem.Name = "loadAudioToolStripMenuItem";
+            this.loadAudioToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.loadAudioToolStripMenuItem.Text = "Load Audio";
+            // 
+            // playAudioToolStripMenuItem
+            // 
+            this.playAudioToolStripMenuItem.Name = "playAudioToolStripMenuItem";
+            this.playAudioToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.playAudioToolStripMenuItem.Text = "Play Audio";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(183, 6);
+            // 
+            // addToMainQueueToolStripMenuItem
+            // 
+            this.addToMainQueueToolStripMenuItem.Name = "addToMainQueueToolStripMenuItem";
+            this.addToMainQueueToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.addToMainQueueToolStripMenuItem.Text = "Add To Main Queue";
+            // 
+            // addToAudioPlaylistToolStripMenuItem
+            // 
+            this.addToAudioPlaylistToolStripMenuItem.Name = "addToAudioPlaylistToolStripMenuItem";
+            this.addToAudioPlaylistToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.addToAudioPlaylistToolStripMenuItem.Text = "Add To Audio Playlist";
+            // 
+            // playNextToolStripMenuItem
+            // 
+            this.playNextToolStripMenuItem.Name = "playNextToolStripMenuItem";
+            this.playNextToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.playNextToolStripMenuItem.Text = "Play As Next In Queue";
+            this.playNextToolStripMenuItem.Click += new System.EventHandler(this.playNextToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(183, 6);
+            // 
+            // addToMainQueueAndStopToolStripMenuItem
+            // 
+            this.addToMainQueueAndStopToolStripMenuItem.Name = "addToMainQueueAndStopToolStripMenuItem";
+            this.addToMainQueueAndStopToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.addToMainQueueAndStopToolStripMenuItem.Text = "Add To Main Queue And Stop";
+            // 
+            // addToCustomQueueToolStripMenuItem
+            // 
+            this.addToCustomQueueToolStripMenuItem.Name = "addToCustomQueueToolStripMenuItem";
+            this.addToCustomQueueToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.addToCustomQueueToolStripMenuItem.Text = "Add To Custom Queue";
+            // 
+            // createANewQueueAndAddToolStripMenuItem
+            // 
+            this.createANewQueueAndAddToolStripMenuItem.Name = "createANewQueueAndAddToolStripMenuItem";
+            this.createANewQueueAndAddToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.createANewQueueAndAddToolStripMenuItem.Text = "Create A New Queue And Add";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(231, 6);
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.addToolStripMenuItem.Text = "Add All Songs From This Album";
+            // 
+            // addAllSongsFromThisArtistToolStripMenuItem
+            // 
+            this.addAllSongsFromThisArtistToolStripMenuItem.Name = "addAllSongsFromThisArtistToolStripMenuItem";
+            this.addAllSongsFromThisArtistToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.addAllSongsFromThisArtistToolStripMenuItem.Text = "Add All Songs From This Artist";
+            // 
+            // addAllFromMasterPlaylistToolStripMenuItem
+            // 
+            this.addAllFromMasterPlaylistToolStripMenuItem.Name = "addAllFromMasterPlaylistToolStripMenuItem";
+            this.addAllFromMasterPlaylistToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.addAllFromMasterPlaylistToolStripMenuItem.Text = "Add All from Master Playlist";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.AutoSize = false;
+            this.toolStripMenuItem1.Enabled = false;
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(242, 18);
+            this.toolStripMenuItem1.Text = "General";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.AutoSize = false;
+            this.toolStripMenuItem2.Enabled = false;
+            this.toolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(242, 18);
+            this.toolStripMenuItem2.Text = "Edit";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(239, 6);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.AutoSize = false;
+            this.toolStripMenuItem3.Enabled = false;
+            this.toolStripMenuItem3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(242, 18);
+            this.toolStripMenuItem3.Text = "Queue";
+            // 
+            // fixIssuesToolStripMenuItem
+            // 
+            this.fixIssuesToolStripMenuItem.Name = "fixIssuesToolStripMenuItem";
+            this.fixIssuesToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.fixIssuesToolStripMenuItem.Text = "Fix Audio Issues";
+            this.fixIssuesToolStripMenuItem.Click += new System.EventHandler(this.fixIssuesToolStripMenuItem_Click);
+            // 
+            // audioRecommendationsToolStripMenuItem
+            // 
+            this.audioRecommendationsToolStripMenuItem.Name = "audioRecommendationsToolStripMenuItem";
+            this.audioRecommendationsToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.audioRecommendationsToolStripMenuItem.Text = "Audio Recommendations";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.AutoSize = false;
+            this.toolStripMenuItem4.Enabled = false;
+            this.toolStripMenuItem4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(242, 18);
+            this.toolStripMenuItem4.Text = "Manage";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(239, 6);
+            // 
+            // audioToolsToolStripMenuItem
+            // 
+            this.audioToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.audioToolsManagerToolStripMenuItem,
+            this.toolStripSeparator7,
+            this.toolStripMenuItem6,
+            this.trimAudioFileToolStripMenuItem,
+            this.cutoutAudioFileToolStripMenuItem,
+            this.splitAudioFileToolStripMenuItem,
+            this.toolStripSeparator6,
+            this.toolStripMenuItem5,
+            this.normalizeAudioLevelToolStripMenuItem,
+            this.setChannelToStereoToolStripMenuItem,
+            this.setChannelToMonoToolStripMenuItem,
+            this.mergeChannelsToolStripMenuItem});
+            this.audioToolsToolStripMenuItem.Name = "audioToolsToolStripMenuItem";
+            this.audioToolsToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.audioToolsToolStripMenuItem.Text = "Audio Tools";
+            // 
+            // videoToolsToolStripMenuItem
+            // 
+            this.videoToolsToolStripMenuItem.Name = "videoToolsToolStripMenuItem";
+            this.videoToolsToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.videoToolsToolStripMenuItem.Text = "Video Tools";
+            // 
+            // trimAudioFileToolStripMenuItem
+            // 
+            this.trimAudioFileToolStripMenuItem.Name = "trimAudioFileToolStripMenuItem";
+            this.trimAudioFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.trimAudioFileToolStripMenuItem.Text = "Trim Audio File";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.AutoSize = false;
+            this.toolStripMenuItem5.Enabled = false;
+            this.toolStripMenuItem5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(242, 18);
+            this.toolStripMenuItem5.Text = "Volume";
+            // 
+            // cutoutAudioFileToolStripMenuItem
+            // 
+            this.cutoutAudioFileToolStripMenuItem.Name = "cutoutAudioFileToolStripMenuItem";
+            this.cutoutAudioFileToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.cutoutAudioFileToolStripMenuItem.Text = "Cutout Audio File";
+            // 
+            // splitAudioFileToolStripMenuItem
+            // 
+            this.splitAudioFileToolStripMenuItem.Name = "splitAudioFileToolStripMenuItem";
+            this.splitAudioFileToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.splitAudioFileToolStripMenuItem.Text = "Split Audio File";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(190, 6);
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.AutoSize = false;
+            this.toolStripMenuItem6.Enabled = false;
+            this.toolStripMenuItem6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(242, 18);
+            this.toolStripMenuItem6.Text = "Modify";
+            // 
+            // normalizeAudioLevelToolStripMenuItem
+            // 
+            this.normalizeAudioLevelToolStripMenuItem.Name = "normalizeAudioLevelToolStripMenuItem";
+            this.normalizeAudioLevelToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.normalizeAudioLevelToolStripMenuItem.Text = "Normalize Audio Level";
+            // 
+            // setChannelToStereoToolStripMenuItem
+            // 
+            this.setChannelToStereoToolStripMenuItem.Name = "setChannelToStereoToolStripMenuItem";
+            this.setChannelToStereoToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.setChannelToStereoToolStripMenuItem.Text = "Set Channel To Stereo";
+            // 
+            // setChannelToMonoToolStripMenuItem
+            // 
+            this.setChannelToMonoToolStripMenuItem.Name = "setChannelToMonoToolStripMenuItem";
+            this.setChannelToMonoToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.setChannelToMonoToolStripMenuItem.Text = "Set Channel To Mono";
+            // 
+            // mergeChannelsToolStripMenuItem
+            // 
+            this.mergeChannelsToolStripMenuItem.Name = "mergeChannelsToolStripMenuItem";
+            this.mergeChannelsToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.mergeChannelsToolStripMenuItem.Text = "Merge Channels";
+            // 
+            // audioToolsManagerToolStripMenuItem
+            // 
+            this.audioToolsManagerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.audioToolsManagerToolStripMenuItem.Name = "audioToolsManagerToolStripMenuItem";
+            this.audioToolsManagerToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.audioToolsManagerToolStripMenuItem.Text = "Audio Tools Manager";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(190, 6);
+            // 
+            // conversionToolStripMenuItem
+            // 
+            this.conversionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem8,
+            this.openConversionManagerToolStripMenuItem,
+            this.toolStripSeparator8,
+            this.toolStripMenuItem7,
+            this.convertAudioToMP3ToolStripMenuItem,
+            this.convertAudioToWAVToolStripMenuItem,
+            this.convertAudioToFLACToolStripMenuItem,
+            this.convertAudioToOGGToolStripMenuItem,
+            this.convertAudioToM4AToolStripMenuItem,
+            this.toolStripSeparator9,
+            this.toolStripMenuItem9,
+            this.tieAMusicVideoToolStripMenuItem});
+            this.conversionToolStripMenuItem.Name = "conversionToolStripMenuItem";
+            this.conversionToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.conversionToolStripMenuItem.Text = "Conversion";
+            // 
+            // openConversionManagerToolStripMenuItem
+            // 
+            this.openConversionManagerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.openConversionManagerToolStripMenuItem.Name = "openConversionManagerToolStripMenuItem";
+            this.openConversionManagerToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.openConversionManagerToolStripMenuItem.Text = "Video Conversion Manager";
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(185, 6);
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.AutoSize = false;
+            this.toolStripMenuItem7.Enabled = false;
+            this.toolStripMenuItem7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(242, 18);
+            this.toolStripMenuItem7.Text = "Audio";
+            // 
+            // convertAudioToMP3ToolStripMenuItem
+            // 
+            this.convertAudioToMP3ToolStripMenuItem.Name = "convertAudioToMP3ToolStripMenuItem";
+            this.convertAudioToMP3ToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.convertAudioToMP3ToolStripMenuItem.Text = "Convert Audio To .MP3";
+            // 
+            // convertAudioToWAVToolStripMenuItem
+            // 
+            this.convertAudioToWAVToolStripMenuItem.Name = "convertAudioToWAVToolStripMenuItem";
+            this.convertAudioToWAVToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.convertAudioToWAVToolStripMenuItem.Text = "Convert Audio To .WAV";
+            // 
+            // convertAudioToOGGToolStripMenuItem
+            // 
+            this.convertAudioToOGGToolStripMenuItem.Name = "convertAudioToOGGToolStripMenuItem";
+            this.convertAudioToOGGToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.convertAudioToOGGToolStripMenuItem.Text = "Convert Audio To .OGG";
+            // 
+            // convertAudioToFLACToolStripMenuItem
+            // 
+            this.convertAudioToFLACToolStripMenuItem.Name = "convertAudioToFLACToolStripMenuItem";
+            this.convertAudioToFLACToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.convertAudioToFLACToolStripMenuItem.Text = "Convert Audio To .FLAC";
+            // 
+            // convertAudioToM4AToolStripMenuItem
+            // 
+            this.convertAudioToM4AToolStripMenuItem.Name = "convertAudioToM4AToolStripMenuItem";
+            this.convertAudioToM4AToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.convertAudioToM4AToolStripMenuItem.Text = "Convert Audio To .M4A";
+            // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(223, 22);
+            this.toolStripMenuItem8.Text = "Audio Conversion Manager";
+            // 
+            // toolStripMenuItem9
+            // 
+            this.toolStripMenuItem9.AutoSize = false;
+            this.toolStripMenuItem9.Enabled = false;
+            this.toolStripMenuItem9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(242, 18);
+            this.toolStripMenuItem9.Text = "Video";
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(220, 6);
+            // 
+            // tieAMusicVideoToolStripMenuItem
+            // 
+            this.tieAMusicVideoToolStripMenuItem.Name = "tieAMusicVideoToolStripMenuItem";
+            this.tieAMusicVideoToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            this.tieAMusicVideoToolStripMenuItem.Text = "Tie A Music Video";
             // 
             // MusicPanel
             // 
@@ -530,6 +1031,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage3)).EndInit();
             this.kryptonPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage5)).EndInit();
+            this.kryptonPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView2)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -581,5 +1086,61 @@
         private Krypton.Toolkit.KryptonPictureBox pic_audioImage;
         private System.Windows.Forms.Label lab_audioArtists;
         private System.Windows.Forms.Label lab_audioTitle;
+        private Krypton.Navigator.KryptonPage kryptonPage5;
+        private BrightIdeasSoftware.ObjectListView objectListView2;
+        private BrightIdeasSoftware.OLVColumn olvColumn1;
+        private BrightIdeasSoftware.OLVColumn olvColumn2;
+        private BrightIdeasSoftware.OLVColumn olvColumn3;
+        private BrightIdeasSoftware.OLVColumn olvColumn4;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem loadAudioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem playAudioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem playNextToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem addToMainQueueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addToAudioPlaylistToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addToMainQueueAndStopToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addToCustomQueueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createANewQueueAndAddToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem addAllSongsFromThisArtistToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addAllFromMasterPlaylistToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem fixIssuesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem audioRecommendationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem audioToolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem trimAudioFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem videoToolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem audioToolsManagerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem cutoutAudioFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem splitAudioFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripMenuItem normalizeAudioLevelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setChannelToStereoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setChannelToMonoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mergeChannelsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conversionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openConversionManagerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
+        private System.Windows.Forms.ToolStripMenuItem convertAudioToMP3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem convertAudioToWAVToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem convertAudioToOGGToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
+        private System.Windows.Forms.ToolStripMenuItem convertAudioToFLACToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem convertAudioToM4AToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
+        private System.Windows.Forms.ToolStripMenuItem tieAMusicVideoToolStripMenuItem;
     }
 }
