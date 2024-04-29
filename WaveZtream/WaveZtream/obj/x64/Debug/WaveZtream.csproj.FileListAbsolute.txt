@@ -81,3 +81,12 @@ C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.Wi
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.RadDock.xml
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.UI.xml
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.exe.licenses
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.Themes.CrystalDark.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.Themes.Material.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.Themes.Office2010Blue.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.Themes.Office2013Dark.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.Themes.Office2019.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.Themes.TelerikMetro.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.Themes.TelerikMetroBlue.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.Themes.VisualStudio2012Dark.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.Themes.Windows7.dll

@@ -55,6 +55,18 @@
             this.fluentDarkTheme1 = new Telerik.WinControls.Themes.FluentDarkTheme();
             this.kryptonSplitContainer1 = new Krypton.Toolkit.KryptonSplitContainer();
             this.colorSlider1 = new Accord.Controls.ColorSlider();
+            this.radDock1 = new Telerik.WinControls.UI.Docking.RadDock();
+            this.documentContainer1 = new Telerik.WinControls.UI.Docking.DocumentContainer();
+            this.dockPanel1 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
+            this.visualStudio2012DarkTheme1 = new Telerik.WinControls.Themes.VisualStudio2012DarkTheme();
+            this.office2013DarkTheme1 = new Telerik.WinControls.Themes.Office2013DarkTheme();
+            this.office2019DarkTheme1 = new Telerik.WinControls.Themes.Office2019DarkTheme();
+            this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
+            this.materialTheme1 = new Telerik.WinControls.Themes.MaterialTheme();
+            this.telerikMetroBlueTheme1 = new Telerik.WinControls.Themes.TelerikMetroBlueTheme();
+            this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
+            this.office2010BlueTheme1 = new Telerik.WinControls.Themes.Office2010BlueTheme();
+            this.windows7Theme1 = new Telerik.WinControls.Themes.Windows7Theme();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDockableNavigator1)).BeginInit();
             this.kryptonDockableNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
@@ -74,6 +86,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).BeginInit();
             this.kryptonSplitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radDock1)).BeginInit();
+            this.radDock1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.documentContainer1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonDockableNavigator1
@@ -317,12 +332,13 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = null;
-            this.pictureBox1.Location = new System.Drawing.Point(468, 468);
+            this.pictureBox1.Location = new System.Drawing.Point(443, 468);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(104, 103);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             // 
             // kryptonSplitContainer1
             // 
@@ -340,6 +356,43 @@
             this.colorSlider1.TabIndex = 0;
             this.colorSlider1.Text = "colorSlider1";
             // 
+            // radDock1
+            // 
+            this.radDock1.Controls.Add(this.documentContainer1);
+            this.radDock1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radDock1.IsCleanUpTarget = true;
+            this.radDock1.Location = new System.Drawing.Point(0, 0);
+            this.radDock1.MainDocumentContainer = this.documentContainer1;
+            this.radDock1.Name = "radDock1";
+            this.radDock1.Padding = new System.Windows.Forms.Padding(0);
+            // 
+            // 
+            // 
+            this.radDock1.RootElement.MinSize = new System.Drawing.Size(25, 25);
+            this.radDock1.Size = new System.Drawing.Size(1089, 648);
+            this.radDock1.SplitterWidth = 2;
+            this.radDock1.TabIndex = 6;
+            this.radDock1.TabStop = false;
+            this.radDock1.ThemeName = "VisualStudio2012Dark";
+            // 
+            // documentContainer1
+            // 
+            this.documentContainer1.Name = "documentContainer1";
+            // 
+            // 
+            // 
+            this.documentContainer1.RootElement.MinSize = new System.Drawing.Size(25, 25);
+            this.documentContainer1.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Fill;
+            this.documentContainer1.SplitterWidth = 2;
+            this.documentContainer1.ThemeName = "VisualStudio2012Dark";
+            // 
+            // dockPanel1
+            // 
+            this.dockPanel1.Location = new System.Drawing.Point(163, 124);
+            this.dockPanel1.Name = "dockPanel1";
+            this.dockPanel1.Size = new System.Drawing.Size(200, 100);
+            this.dockPanel1.TabIndex = 0;
+            // 
             // MusicPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,6 +403,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.objectListView1);
             this.Controls.Add(this.kryptonPanel1);
+            this.Controls.Add(this.radDock1);
             this.Name = "MusicPanel";
             this.Text = "MusicPanel";
             this.Load += new System.EventHandler(this.MusicPanel_Load);
@@ -373,6 +427,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).EndInit();
             this.kryptonSplitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radDock1)).EndInit();
+            this.radDock1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.documentContainer1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -405,5 +462,17 @@
         private Telerik.WinControls.Themes.FluentDarkTheme fluentDarkTheme1;
         private Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer1;
         private Accord.Controls.ColorSlider colorSlider1;
+        private Telerik.WinControls.UI.Docking.RadDock radDock1;
+        private Telerik.WinControls.UI.Docking.DocumentContainer documentContainer1;
+        private WeifenLuo.WinFormsUI.Docking.DockPanel dockPanel1;
+        private Telerik.WinControls.Themes.VisualStudio2012DarkTheme visualStudio2012DarkTheme1;
+        private Telerik.WinControls.Themes.Office2013DarkTheme office2013DarkTheme1;
+        private Telerik.WinControls.Themes.Office2019DarkTheme office2019DarkTheme1;
+        private Telerik.WinControls.Themes.CrystalDarkTheme crystalDarkTheme1;
+        private Telerik.WinControls.Themes.MaterialTheme materialTheme1;
+        private Telerik.WinControls.Themes.TelerikMetroBlueTheme telerikMetroBlueTheme1;
+        private Telerik.WinControls.Themes.TelerikMetroTheme telerikMetroTheme1;
+        private Telerik.WinControls.Themes.Office2010BlueTheme office2010BlueTheme1;
+        private Telerik.WinControls.Themes.Windows7Theme windows7Theme1;
     }
 }

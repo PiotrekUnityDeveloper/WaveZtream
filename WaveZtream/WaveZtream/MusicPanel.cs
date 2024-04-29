@@ -12,6 +12,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Telerik.WinControls.UI;
 using Telerik.WinControls.UI.Docking;
 
 namespace WaveZtream
@@ -28,7 +29,7 @@ namespace WaveZtream
             objlistview = objectListView1;
         }
 
-        public static string[] musicLocation = { "C:\\Users\\Piotr\\Desktop\\Music",};
+        public static string[] musicLocation = { "C:\\Users\\Piotr\\Music" };
         public static List<AudioDefinition> audioFiles = new List<AudioDefinition>();
         public static MetadataHadlingMode metaHandling = MetadataHadlingMode.TrySeparate;
         public static List<Image> covers = new List<Image>();
@@ -37,6 +38,42 @@ namespace WaveZtream
         private void MusicPanel_Load(object sender, EventArgs e)
         {
             Start();
+
+            // My Audio Window
+            DocumentWindow myAudio = new DocumentWindow();
+            radDock1.AddDocument(myAudio);
+            myAudio.Show();
+            myAudio.Controls.Add(objectListView1);
+            myAudio.Controls.Add(button1);
+            myAudio.Text = "My Audio";
+            myAudio.BackColor = Color.Black;
+            //myAudio.Width = objectListView1.Width;
+            int myAudioWidth = objectListView1.Width;
+            objectListView1.Parent = myAudio;
+            objectListView1.Location = new Point(0, 0);
+            objectListView1.Dock = DockStyle.Fill;
+            button1.BringToFront();
+
+            // Playback Manager Window
+            DocumentWindow playbackManager = new DocumentWindow();
+            radDock1.AddDocument(playbackManager);
+            playbackManager.Show();
+            playbackManager.Controls.Add(kryptonPanel1);
+            playbackManager.Text = "Playback Manager";
+            playbackManager.BackColor = Color.Black;
+            //playbackManager.Width = kryptonPanel1.Width;
+            int playbackManagerWidth = kryptonPanel1.Width;
+            kryptonPanel1.Dock = DockStyle.Fill;
+
+            myAudio.DockState = DockState.Docked;
+            myAudio.DockManager.Dock = DockStyle.Left;
+            //myAudio.Width = myAudioWidth;
+            playbackManager.TabStrip.SizeInfo.AbsoluteSize = new Size(myAudioWidth, playbackManager.TabStrip.SizeInfo.AbsoluteSize.Height);
+            //myAudio.DockManager.Width = myAudioWidth;
+
+            playbackManager.DockState = DockState.Docked;
+            playbackManager.DockManager.Dock = DockStyle.Right;
+            //playbackManager.DockManager.Width = playbackManagerWidth;
         }
 
         public async void Start()
