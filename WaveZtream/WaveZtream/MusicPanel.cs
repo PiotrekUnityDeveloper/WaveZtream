@@ -46,7 +46,8 @@ namespace WaveZtream
             radDock1.AddDocument(myAudio);
             myAudio.Show();
             myAudio.Controls.Add(kryptonPanel5);
-            myAudio.Controls.Add(button1);
+            myAudio.Controls.Add(kryptonButton1);
+            myAudio.Controls.Add(kryptonButton2);
             myAudio.Text = "My Audio";
             myAudio.BackColor = Color.Black;
             //myAudio.Width = objectListView1.Width;
@@ -54,7 +55,8 @@ namespace WaveZtream
             kryptonPanel5.Parent = myAudio;
             kryptonPanel5.Location = new Point(0, 0);
             kryptonPanel5.Dock = DockStyle.Fill;
-            button1.BringToFront();
+            kryptonButton1.BringToFront();
+            kryptonButton2.BringToFront();
 
             // Playback Manager Window
             DocumentWindow playbackManager = new DocumentWindow();
@@ -205,6 +207,42 @@ namespace WaveZtream
         {
 
         }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            PlaybackManager.LoadNextAudioFromBuffer();
+            PlaybackManager.PlayNextAudioFromBuffer();
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            AudioDefinition newdef = LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text));
+            PlaybackManager.AddAudioToBuffer(newdef);
+        }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            currentDefinition = LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text));
+            PlaybackManager.PlayAudio(LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text)));
+        }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
+            PlaybackManager.PlayNextAudioFromBuffer();
+        }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            PlaybackManager.LoadNextAudioFromBuffer();
+        }
+
+        private void kryptonButton6_Click(object sender, EventArgs e)
+        {
+            AudioDefinition newdef = LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text));
+            PlaybackManager.AddAudioToBuffer(newdef);
+            PlaybackManager.LoadNextAudioFromBuffer();
+            PlaybackManager.PlayNextAudioFromBuffer();
+        }
     }
 
     public class AudioDefinition
@@ -219,10 +257,17 @@ namespace WaveZtream
         public string audioAlbumArtists { get; set; }
         public string audioAlbum { get; set; }
 
+        // type
+        public AudioSourceType audioSourceType { get; set; } = AudioSourceType.LocalFile;
+
         // file specific
         public string audioFileName { get; set; }
         public string audioFilePath { get; set; }
         public string audioFileExtension { get; set; }
+
+        // stream specific
+
+        public string audioFileSourceURL { get; set; }
 
         //misc
         public bool wasSeparated { get; set; }
@@ -233,5 +278,11 @@ namespace WaveZtream
     {
         CopyFileName,
         TrySeparate,
+    }
+
+    public enum AudioSourceType
+    {
+        LocalFile,
+        Stream,
     }
 }
