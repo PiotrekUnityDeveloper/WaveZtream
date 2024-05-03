@@ -27,6 +27,7 @@ namespace WaveZtream
             InitializeComponent();
             instance = this;
             objlistview = objectListView1;
+            ProgramManager.SetTitlebarDarkTheme(true);
         }
 
         public static string[] musicLocation = { "C:\\Users\\Piotr\\Music" };

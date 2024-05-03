@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\playbackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\playbackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\musicpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\musicpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|c:\\users\\piotr\\desktop\\waveztream\\waveztream\\waveztream\\musicpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|c:\\users\\piotr\\desktop\\waveztream\\waveztream\\waveztream\\programmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\programmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\queuemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\queuemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\musicpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\musicpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|c:\\users\\piotr\\desktop\\waveztream\\waveztream\\waveztream\\playbackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\playbackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\librarymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -36,10 +44,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\initializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\initializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\queuemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\queuemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\control_accounteditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -105,7 +109,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -113,7 +117,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "ProgramManager.cs",
+              "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\ProgramManager.cs",
+              "RelativeDocumentMoniker": "WaveZtream\\ProgramManager.cs",
+              "ToolTip": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\ProgramManager.cs",
+              "RelativeToolTip": "WaveZtream\\ProgramManager.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAkwCcAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T19:19:38.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "MusicPanel.resx",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\MusicPanel.resx",
               "RelativeDocumentMoniker": "WaveZtream\\MusicPanel.resx",
@@ -125,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "licenses.licx",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Properties\\licenses.licx",
               "RelativeDocumentMoniker": "WaveZtream\\Properties\\licenses.licx",
@@ -138,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "QueueManager.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\QueueManager.cs",
               "RelativeDocumentMoniker": "WaveZtream\\QueueManager.cs",
@@ -146,11 +163,12 @@
               "RelativeToolTip": "WaveZtream\\QueueManager.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T22:12:52.334Z"
+              "WhenOpened": "2024-04-28T22:12:52.334Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "MusicPanel.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\MusicPanel.Designer.cs",
               "RelativeDocumentMoniker": "WaveZtream\\MusicPanel.Designer.cs",
@@ -163,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "WaveUtils.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\WaveUtils.cs",
               "RelativeDocumentMoniker": "WaveZtream\\WaveUtils.cs",
@@ -175,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "WaveZtream",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\WaveZtream.csproj",
               "RelativeDocumentMoniker": "WaveZtream\\WaveZtream.csproj",
@@ -186,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "LibraryManager.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\LibraryManager.cs",
               "RelativeDocumentMoniker": "WaveZtream\\LibraryManager.cs",
@@ -194,12 +212,11 @@
               "RelativeToolTip": "WaveZtream\\LibraryManager.cs",
               "ViewState": "AQIAAKkAAAAAAAAAAAAAABcAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T20:03:26.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-24T20:03:26.354Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Resources.resx",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "WaveZtream\\Properties\\Resources.resx",
@@ -211,33 +228,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "PlaybackManager.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\PlaybackManager.cs",
               "RelativeDocumentMoniker": "WaveZtream\\PlaybackManager.cs",
               "ToolTip": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\PlaybackManager.cs",
               "RelativeToolTip": "WaveZtream\\PlaybackManager.cs",
-              "ViewState": "AQIAAO0AAAAAAAAAAAAYwAcBAAAzAAAA",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAYwF0AAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-24T11:43:07.392Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MusicPanel.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\MusicPanel.cs",
               "RelativeDocumentMoniker": "WaveZtream\\MusicPanel.cs",
               "ToolTip": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\MusicPanel.cs",
               "RelativeToolTip": "WaveZtream\\MusicPanel.cs",
-              "ViewState": "AQIAAGoAAAAAAAAAAAAwwHoAAAAJAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAAB0AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-24T10:00:56.753Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MusicPanel.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\MusicPanel.cs",
               "RelativeDocumentMoniker": "WaveZtream\\MusicPanel.cs",
@@ -249,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Control_AccountEditor.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Control_AccountEditor.cs",
               "RelativeDocumentMoniker": "WaveZtream\\Control_AccountEditor.cs",
@@ -261,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Control_AccountEditor.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Control_AccountEditor.cs",
               "RelativeDocumentMoniker": "WaveZtream\\Control_AccountEditor.cs",
@@ -272,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Initializer.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Initializer.cs",
               "RelativeDocumentMoniker": "WaveZtream\\Initializer.cs",
@@ -283,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Initializer.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Initializer.cs",
               "RelativeDocumentMoniker": "WaveZtream\\Initializer.cs",
@@ -295,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Initializer_MainAccountEditor.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Initializer_MainAccountEditor.cs",
               "RelativeDocumentMoniker": "WaveZtream\\Initializer_MainAccountEditor.cs",
@@ -306,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Initializer_MultipleAccountSetup.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Initializer_MultipleAccountSetup.cs",
               "RelativeDocumentMoniker": "WaveZtream\\Initializer_MultipleAccountSetup.cs",
@@ -317,7 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Initializer_MultipleAccountSetup.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Initializer_MultipleAccountSetup.cs",
               "RelativeDocumentMoniker": "WaveZtream\\Initializer_MultipleAccountSetup.cs",
@@ -329,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Control_StringList.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Control_StringList.cs",
               "RelativeDocumentMoniker": "WaveZtream\\Control_StringList.cs",
@@ -340,7 +357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Control_StringList.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Control_StringList.cs",
               "RelativeDocumentMoniker": "WaveZtream\\Control_StringList.cs",
@@ -352,7 +369,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Initializer_MainAccountEditor.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Initializer_MainAccountEditor.cs",
               "RelativeDocumentMoniker": "WaveZtream\\Initializer_MainAccountEditor.cs",
@@ -364,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "StringItem.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\StringItem.cs",
               "RelativeDocumentMoniker": "WaveZtream\\StringItem.cs",
@@ -375,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "StringItem.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\StringItem.cs",
               "RelativeDocumentMoniker": "WaveZtream\\StringItem.cs",
@@ -387,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Control_AccountEditor.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Control_AccountEditor.Designer.cs",
               "RelativeDocumentMoniker": "WaveZtream\\Control_AccountEditor.Designer.cs",
