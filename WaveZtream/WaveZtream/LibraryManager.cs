@@ -1,4 +1,5 @@
-﻿using BrightIdeasSoftware;
+﻿using Accord.IO;
+using BrightIdeasSoftware;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -13,27 +14,39 @@ namespace WaveZtream
 {
     internal class LibraryManager
     {
-        private static SearchOption searchOption = SearchOption.TopDirectoryOnly;
+        public static LibraryGroup mainLibrary = new LibraryGroup()
+        {
+            groupName = "mainLib",
+            customLibraries = new List<CustomLibrary>()
+            {
+                new CustomLibrary(){ libraryName = "DefaultWindowsMusicPath",
+                    libraryAudioPath = "C:\\Users\\Piotr\\Music",
+                    librarySearchOption = SearchOption.AllDirectories },
+            }
+        };
 
-        public static async Task GetAudioFiles(List<string> filePaths)
+        public static Playlist.LibraryPlaylist libraryBulkPlaylist = new Playlist.LibraryPlaylist();
+
+        public static async Task GetAudioFiles()
         {
             await Task.Run(() => {
 
                 int index = 0;
+                libraryBulkPlaylist.playlistItems.Clear();
 
-                foreach (string s in MusicPanel.musicLocation)
+                foreach (CustomLibrary s in mainLibrary.customLibraries)
                 {
-                    foreach (string file in Directory.GetFiles(s, "*.mp3", searchOption)
-                                 .Union(Directory.GetFiles(s, "*.wav", searchOption))
-                                 .Union(Directory.GetFiles(s, "*.flac", searchOption))
-                                 .Union(Directory.GetFiles(s, "*.aiff", searchOption))
-                                 .Union(Directory.GetFiles(s, "*.ogg", searchOption))
-                                 .Union(Directory.GetFiles(s, "*.aac", searchOption))
-                                 .Union(Directory.GetFiles(s, "*.wma", searchOption))
-                                 .Union(Directory.GetFiles(s, "*.m4a", searchOption))
-                                 .Union(Directory.GetFiles(s, "*.opus", searchOption))
-                                 .Union(Directory.GetFiles(s, "*.mp1", searchOption))
-                                 .Union(Directory.GetFiles(s, "*.mp2", searchOption)))
+                    foreach (string file in Directory.GetFiles(s.libraryAudioPath, "*.mp3", s.librarySearchOption)
+                                 .Union(Directory.GetFiles(s.libraryAudioPath, "*.wav", s.librarySearchOption))
+                                 .Union(Directory.GetFiles(s.libraryAudioPath, "*.flac", s.librarySearchOption))
+                                 .Union(Directory.GetFiles(s.libraryAudioPath, "*.aiff", s.librarySearchOption))
+                                 .Union(Directory.GetFiles(s.libraryAudioPath, "*.ogg", s.librarySearchOption))
+                                 .Union(Directory.GetFiles(s.libraryAudioPath, "*.aac", s.librarySearchOption))
+                                 .Union(Directory.GetFiles(s.libraryAudioPath, "*.wma", s.librarySearchOption))
+                                 .Union(Directory.GetFiles(s.libraryAudioPath, "*.m4a", s.librarySearchOption))
+                                 .Union(Directory.GetFiles(s.libraryAudioPath, "*.opus", s.librarySearchOption))
+                                 .Union(Directory.GetFiles(s.libraryAudioPath, "*.mp1", s.librarySearchOption))
+                                 .Union(Directory.GetFiles(s.libraryAudioPath, "*.mp2", s.librarySearchOption)))
                     {
                         //  Structure the audio definition here
 
@@ -88,12 +101,12 @@ namespace WaveZtream
                         {
                             usesmeta = false;
 
-                            if (MusicPanel.metaHandling == MetadataHadlingMode.CopyFileName)
+                            if (SettingsManager.LibrarySettings.metaHandling == MetadataHadlingMode.CopyFileName)
                             {
                                 title = Path.GetFileNameWithoutExtension(file);
                                 artists = "-";
                             }
-                            else if (MusicPanel.metaHandling == MetadataHadlingMode.TrySeparate)
+                            else if (SettingsManager.LibrarySettings.metaHandling == MetadataHadlingMode.TrySeparate)
                             {
                                 wasseparated = true;
 
@@ -131,7 +144,7 @@ namespace WaveZtream
                             //switch with a default image which i dont have any atm
                         }
 
-                        MusicPanel.audioFiles.Add(new AudioDefinition
+                        s.libraryPlaylist.playlistItems.Add(new AudioDefinition
                         {
                             audioFileName = Path.GetFileName(file),
                             audioCover = audioCover,
@@ -149,11 +162,13 @@ namespace WaveZtream
 
                         //Console.WriteLine($"Found an MP3 file: {file}");
                     }
+
+                    libraryBulkPlaylist.playlistItems.AddRange(s.libraryPlaylist.playlistItems);
                 }
 
                 //titleColumn.ImageAspectName = "audioCover"; // Specify the aspect name for images
 
-                MusicPanel.objlistview.SetObjects(MusicPanel.audioFiles);
+                MusicPanel.objlistview.SetObjects(libraryBulkPlaylist.playlistItems);
                 //titleColumn.ImageAspectName = "covers";
 
                 MusicPanel.instance.Invoke((MethodInvoker)delegate
@@ -189,8 +204,77 @@ namespace WaveZtream
 
         public static AudioDefinition GetDefinitionByIndex(int id)
         {
-            return MusicPanel.audioFiles[id];
+            return libraryBulkPlaylist.playlistItems[id];
         }
 
+        public static AudioDefinition GetRandomAudioFromMainLibrary()
+        {
+            resortsearch:
+            Random randomIndex = new Random();
+            int randomLibrary = randomIndex.Next(0, mainLibrary.customLibraries.Count - 1);
+
+            if (mainLibrary.customLibraries.Count > 0)
+            {
+                // TODO: ARE ALL LIBRARIES EMPTY CHECK
+                AudioDefinition def = mainLibrary.customLibraries[randomLibrary].libraryPlaylist.GetRandomPlaylistItem();
+                if (def == null)
+                {
+                    goto resortsearch;
+                }
+                else
+                {
+                    return def;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+    }
+
+    public class LibraryGroup
+    {
+        public string groupName { get; set; }
+        public List<CustomLibrary> customLibraries { get; set; } = new List<CustomLibrary>();
+    }
+
+    public class CustomLibrary
+    {
+        public string libraryName { get; set; }
+        //public List<AudioDefinition> libraryAudio { get; set; }
+        public string libraryAudioPath { get; set; }
+        public SearchOption librarySearchOption { get; set; } = SearchOption.TopDirectoryOnly;
+        public Playlist.LibraryPlaylist libraryPlaylist { get; set; } = new Playlist.LibraryPlaylist();
+    }
+
+    public class Playlist
+    {
+        public class AudioPlaylist
+        {
+
+        }
+
+        public class LibraryPlaylist
+        {
+            public string playlistName { get; set; } = null;
+            public CustomLibrary parentLibrary { get; set; }
+
+
+            public List<AudioDefinition> playlistItems { get; set; } = new List<AudioDefinition>();
+
+            public AudioDefinition GetRandomPlaylistItem()
+            {
+                if (playlistItems.Count == 0)
+                {
+                    return null;
+                    //throw new InvalidOperationException("The playlist is empty.");
+                }
+
+                Random randomIndex = new Random();
+                return playlistItems[randomIndex.Next(0, playlistItems.Count - 1)];
+            }
+        }
     }
 }

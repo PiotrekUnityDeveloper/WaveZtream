@@ -65,12 +65,9 @@
             this.kryptonPanel5 = new Krypton.Toolkit.KryptonPanel();
             this.kryptonDockableNavigator2 = new Krypton.Docking.KryptonDockableNavigator();
             this.kryptonPage3 = new Krypton.Navigator.KryptonPage();
-            this.kryptonButton6 = new Krypton.Toolkit.KryptonButton();
             this.kryptonButton5 = new Krypton.Toolkit.KryptonButton();
             this.kryptonButton4 = new Krypton.Toolkit.KryptonButton();
-            this.kryptonButton3 = new Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new Krypton.Toolkit.KryptonButton();
-            this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             this.kryptonPage4 = new Krypton.Navigator.KryptonPage();
             this.kryptonPage5 = new Krypton.Navigator.KryptonPage();
             this.objectListView2 = new BrightIdeasSoftware.ObjectListView();
@@ -130,7 +127,6 @@
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.tieAMusicVideoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new Accord.Controls.PictureBox();
-            this.kryptonPictureBox10 = new Krypton.Toolkit.KryptonPictureBox();
             this.kryptonPictureBox9 = new Krypton.Toolkit.KryptonPictureBox();
             this.kryptonPictureBox8 = new Krypton.Toolkit.KryptonPictureBox();
             this.kryptonPictureBox7 = new Krypton.Toolkit.KryptonPictureBox();
@@ -171,7 +167,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.objectListView2)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox7)).BeginInit();
@@ -266,7 +261,6 @@
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.kryptonPictureBox10);
             this.kryptonPanel1.Controls.Add(this.kryptonPictureBox9);
             this.kryptonPanel1.Controls.Add(this.kryptonPictureBox8);
             this.kryptonPanel1.Controls.Add(this.kryptonPictureBox7);
@@ -458,12 +452,9 @@
             // kryptonPage3
             // 
             this.kryptonPage3.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage3.Controls.Add(this.kryptonButton6);
             this.kryptonPage3.Controls.Add(this.kryptonButton5);
             this.kryptonPage3.Controls.Add(this.kryptonButton4);
-            this.kryptonPage3.Controls.Add(this.kryptonButton3);
             this.kryptonPage3.Controls.Add(this.kryptonButton2);
-            this.kryptonPage3.Controls.Add(this.kryptonButton1);
             this.kryptonPage3.Controls.Add(this.objectListView1);
             this.kryptonPage3.Flags = 65534;
             this.kryptonPage3.LastVisibleSet = true;
@@ -474,65 +465,35 @@
             this.kryptonPage3.ToolTipTitle = "Page ToolTip";
             this.kryptonPage3.UniqueName = "36cee9a6c46e4717bb766d46f9ffad29";
             // 
-            // kryptonButton6
-            // 
-            this.kryptonButton6.Location = new System.Drawing.Point(45, 506);
-            this.kryptonButton6.Name = "kryptonButton6";
-            this.kryptonButton6.PaletteMode = Krypton.Toolkit.PaletteMode.Microsoft365BlackDarkMode;
-            this.kryptonButton6.Size = new System.Drawing.Size(127, 23);
-            this.kryptonButton6.TabIndex = 10;
-            this.kryptonButton6.Values.Text = "Auto Load";
-            this.kryptonButton6.Click += new System.EventHandler(this.kryptonButton6_Click);
-            // 
             // kryptonButton5
             // 
-            this.kryptonButton5.Location = new System.Drawing.Point(45, 566);
+            this.kryptonButton5.Location = new System.Drawing.Point(178, 537);
             this.kryptonButton5.Name = "kryptonButton5";
             this.kryptonButton5.PaletteMode = Krypton.Toolkit.PaletteMode.Microsoft365BlackDarkMode;
             this.kryptonButton5.Size = new System.Drawing.Size(127, 23);
             this.kryptonButton5.TabIndex = 9;
-            this.kryptonButton5.Values.Text = "Load Next";
+            this.kryptonButton5.Values.Text = "Load Next Buffer";
             this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
             // 
             // kryptonButton4
             // 
-            this.kryptonButton4.Location = new System.Drawing.Point(178, 506);
+            this.kryptonButton4.Location = new System.Drawing.Point(311, 537);
             this.kryptonButton4.Name = "kryptonButton4";
             this.kryptonButton4.PaletteMode = Krypton.Toolkit.PaletteMode.Microsoft365BlackDarkMode;
             this.kryptonButton4.Size = new System.Drawing.Size(127, 23);
             this.kryptonButton4.TabIndex = 8;
-            this.kryptonButton4.Values.Text = "Force Play Selected";
+            this.kryptonButton4.Values.Text = "Play Next Buffer";
             this.kryptonButton4.Click += new System.EventHandler(this.kryptonButton4_Click);
-            // 
-            // kryptonButton3
-            // 
-            this.kryptonButton3.Location = new System.Drawing.Point(311, 567);
-            this.kryptonButton3.Name = "kryptonButton3";
-            this.kryptonButton3.PaletteMode = Krypton.Toolkit.PaletteMode.Microsoft365BlackDarkMode;
-            this.kryptonButton3.Size = new System.Drawing.Size(127, 23);
-            this.kryptonButton3.TabIndex = 7;
-            this.kryptonButton3.Values.Text = "DirectPlay Selected";
-            this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
             // 
             // kryptonButton2
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(311, 506);
+            this.kryptonButton2.Location = new System.Drawing.Point(45, 535);
             this.kryptonButton2.Name = "kryptonButton2";
             this.kryptonButton2.PaletteMode = Krypton.Toolkit.PaletteMode.Microsoft365BlackDarkMode;
             this.kryptonButton2.Size = new System.Drawing.Size(127, 23);
             this.kryptonButton2.TabIndex = 6;
-            this.kryptonButton2.Values.Text = "Add To Load List";
+            this.kryptonButton2.Values.Text = "Add to Buffer";
             this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
-            // 
-            // kryptonButton1
-            // 
-            this.kryptonButton1.Location = new System.Drawing.Point(178, 567);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.PaletteMode = Krypton.Toolkit.PaletteMode.Microsoft365BlackDarkMode;
-            this.kryptonButton1.Size = new System.Drawing.Size(127, 23);
-            this.kryptonButton1.TabIndex = 5;
-            this.kryptonButton1.Values.Text = "Load + Play Selected";
-            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // kryptonPage4
             // 
@@ -601,7 +562,7 @@
             this.olvColumn2.AspectName = "audioTitle";
             this.olvColumn2.ImageAspectName = "";
             this.olvColumn2.Text = "Title";
-            this.olvColumn2.Width = 281;
+            this.olvColumn2.Width = 230;
             // 
             // olvColumn3
             // 
@@ -1004,19 +965,9 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
             // 
-            // kryptonPictureBox10
-            // 
-            this.kryptonPictureBox10.Image = global::WaveZtream.Properties.Resources.icons8_shuffle_96__1_;
-            this.kryptonPictureBox10.Location = new System.Drawing.Point(451, 356);
-            this.kryptonPictureBox10.Name = "kryptonPictureBox10";
-            this.kryptonPictureBox10.Size = new System.Drawing.Size(34, 34);
-            this.kryptonPictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.kryptonPictureBox10.TabIndex = 11;
-            this.kryptonPictureBox10.TabStop = false;
-            // 
             // kryptonPictureBox9
             // 
-            this.kryptonPictureBox9.Image = global::WaveZtream.Properties.Resources.icons8_infinity_arrow_96;
+            this.kryptonPictureBox9.Image = global::WaveZtream.Properties.Resources.fadetransition;
             this.kryptonPictureBox9.Location = new System.Drawing.Point(491, 356);
             this.kryptonPictureBox9.Name = "kryptonPictureBox9";
             this.kryptonPictureBox9.Size = new System.Drawing.Size(34, 34);
@@ -1026,8 +977,8 @@
             // 
             // kryptonPictureBox8
             // 
-            this.kryptonPictureBox8.Image = global::WaveZtream.Properties.Resources.icons8_fast_forward_96;
-            this.kryptonPictureBox8.Location = new System.Drawing.Point(354, 356);
+            this.kryptonPictureBox8.Image = global::WaveZtream.Properties.Resources.next;
+            this.kryptonPictureBox8.Location = new System.Drawing.Point(398, 356);
             this.kryptonPictureBox8.Name = "kryptonPictureBox8";
             this.kryptonPictureBox8.Size = new System.Drawing.Size(34, 34);
             this.kryptonPictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1036,7 +987,7 @@
             // 
             // kryptonPictureBox7
             // 
-            this.kryptonPictureBox7.Image = global::WaveZtream.Properties.Resources.icons8_rewind_96;
+            this.kryptonPictureBox7.Image = global::WaveZtream.Properties.Resources.prev;
             this.kryptonPictureBox7.Location = new System.Drawing.Point(47, 356);
             this.kryptonPictureBox7.Name = "kryptonPictureBox7";
             this.kryptonPictureBox7.Size = new System.Drawing.Size(34, 34);
@@ -1046,8 +997,8 @@
             // 
             // kryptonPictureBox6
             // 
-            this.kryptonPictureBox6.Image = global::WaveZtream.Properties.Resources.icons8_skip_96;
-            this.kryptonPictureBox6.Location = new System.Drawing.Point(394, 356);
+            this.kryptonPictureBox6.Image = global::WaveZtream.Properties.Resources.end;
+            this.kryptonPictureBox6.Location = new System.Drawing.Point(438, 356);
             this.kryptonPictureBox6.Name = "kryptonPictureBox6";
             this.kryptonPictureBox6.Size = new System.Drawing.Size(34, 34);
             this.kryptonPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1056,7 +1007,7 @@
             // 
             // kryptonPictureBox5
             // 
-            this.kryptonPictureBox5.Image = global::WaveZtream.Properties.Resources.icons8_shuffle_96__1_;
+            this.kryptonPictureBox5.Image = global::WaveZtream.Properties.Resources.shuffle;
             this.kryptonPictureBox5.Location = new System.Drawing.Point(531, 356);
             this.kryptonPictureBox5.Name = "kryptonPictureBox5";
             this.kryptonPictureBox5.Size = new System.Drawing.Size(34, 34);
@@ -1067,7 +1018,7 @@
             // 
             // kryptonPictureBox4
             // 
-            this.kryptonPictureBox4.Image = global::WaveZtream.Properties.Resources.icons8_repeat_96__1_;
+            this.kryptonPictureBox4.Image = global::WaveZtream.Properties.Resources.repeat;
             this.kryptonPictureBox4.Location = new System.Drawing.Point(571, 356);
             this.kryptonPictureBox4.Name = "kryptonPictureBox4";
             this.kryptonPictureBox4.Size = new System.Drawing.Size(34, 34);
@@ -1077,7 +1028,7 @@
             // 
             // kryptonPictureBox1
             // 
-            this.kryptonPictureBox1.Image = global::WaveZtream.Properties.Resources.icons8_play_96;
+            this.kryptonPictureBox1.Image = global::WaveZtream.Properties.Resources.Play;
             this.kryptonPictureBox1.Location = new System.Drawing.Point(127, 356);
             this.kryptonPictureBox1.Name = "kryptonPictureBox1";
             this.kryptonPictureBox1.Size = new System.Drawing.Size(34, 34);
@@ -1088,7 +1039,7 @@
             // 
             // kryptonPictureBox3
             // 
-            this.kryptonPictureBox3.Image = global::WaveZtream.Properties.Resources.icons8_pause_96;
+            this.kryptonPictureBox3.Image = global::WaveZtream.Properties.Resources.Pause;
             this.kryptonPictureBox3.Location = new System.Drawing.Point(87, 356);
             this.kryptonPictureBox3.Name = "kryptonPictureBox3";
             this.kryptonPictureBox3.Size = new System.Drawing.Size(34, 34);
@@ -1099,7 +1050,7 @@
             // 
             // kryptonPictureBox2
             // 
-            this.kryptonPictureBox2.Image = global::WaveZtream.Properties.Resources.icons8_skip_to_start_96;
+            this.kryptonPictureBox2.Image = global::WaveZtream.Properties.Resources.start;
             this.kryptonPictureBox2.Location = new System.Drawing.Point(7, 356);
             this.kryptonPictureBox2.Name = "kryptonPictureBox2";
             this.kryptonPictureBox2.Size = new System.Drawing.Size(34, 34);
@@ -1161,7 +1112,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.objectListView2)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox7)).EndInit();
@@ -1279,14 +1229,10 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
         private System.Windows.Forms.ToolStripMenuItem tieAMusicVideoToolStripMenuItem;
         private Krypton.Toolkit.KryptonButton kryptonButton2;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
-        private Krypton.Toolkit.KryptonButton kryptonButton3;
         private Krypton.Toolkit.KryptonButton kryptonButton4;
         private Krypton.Toolkit.KryptonButton kryptonButton5;
-        private Krypton.Toolkit.KryptonButton kryptonButton6;
         private System.Windows.Forms.ToolStripMenuItem playNextToolStripMenuItem1;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox6;
-        private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox10;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox9;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox8;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox7;

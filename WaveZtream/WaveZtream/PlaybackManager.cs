@@ -24,6 +24,7 @@ namespace WaveZtream
         public static List<WaveOutEvent> audioOutputsToDispose = new List<WaveOutEvent>();
         
         public static AudioBufferQueueItem bufferedItem = null;
+        public static AudioFileReader audioStreamReader = null;
 
         public static WaveOutEvent audioHandler = null;
         public static long positionOffset = 0;
@@ -62,6 +63,8 @@ namespace WaveZtream
                 AudioFileReader audioFileReader = new AudioFileReader(audioFile);
                 WaveOutEvent waveOut = new WaveOutEvent();
 
+                audioStreamReader = audioFileReader;
+
                 waveOut.Init(audioFileReader);
                 audioHandler = waveOut;
 
@@ -73,6 +76,8 @@ namespace WaveZtream
             else
             {
                 AudioFileReader audioFileReader = new AudioFileReader(audioFile);
+
+                audioStreamReader = audioFileReader;
 
                 bufferedItem = new AudioBufferQueueItem { key = auddef.audioFileName, audioDefinition = auddef, audioOutput = audioHandler };
                 MusicPanel.instance.InitializeSong((int)audioFileReader.TotalTime.TotalMilliseconds);
@@ -94,8 +99,11 @@ namespace WaveZtream
                 MusicPanel.currentDefinition = bufferItem.audioDefinition;
             }
 
+            QueueManager.SetBufferStatus(false);
+
             positionOffset = 0;
 
+            audioStreamReader = new AudioFileReader(bufferItem.audioDefinition.audioFilePath);
             audioHandler = bufferItem.audioOutput;
             usedAudioDef = bufferedItem.audioDefinition;
 
@@ -154,6 +162,8 @@ namespace WaveZtream
                     AudioFileReader audioFileReader = new AudioFileReader(loadedAudioBuffers[0].audioDefinition.audioFilePath);
                     WaveOutEvent waveOut = new WaveOutEvent();
 
+                    //audioStreamReader = audioFileReader;
+
                     waveOut.Init(audioFileReader);
 
                     if(audioHandler == null)
@@ -176,6 +186,7 @@ namespace WaveZtream
                         //loadedAudioBuffers.Remove(loadedBufferItem);
 
                         Console.WriteLine("Loaded the next audio from the buffered queue");
+                        return;
                     }
                     else
                     {
@@ -201,10 +212,19 @@ namespace WaveZtream
                         //loadedAudioBuffers.Remove(loadedBufferItem);
 
                         Console.WriteLine("Loaded the next audio from the buffered queue");
+                        return;
                     }
 
                 }
             }).Start();
+        }
+
+        public static bool IsWaitingAudioBufferEmpty()
+        {
+            if(GetFirstMatchingBuffer(AudioBufferStatus.Waiting, loadedAudioBuffers) == null)
+            {
+                return true;
+            } else { return false; }
         }
 
         public static void AddAudioOutputToDisposal(WaveOutEvent audioOutput)
@@ -238,10 +258,31 @@ namespace WaveZtream
             return null;
         }
 
+        public static bool IsThereAReadyAudioBuffer() // TODO: FIX
+        {
+            AudioBufferQueueItem abqi = GetFirstMatchingBuffer(AudioBufferStatus.Ready, playingAudioBuffers);
+            if(abqi != null) return true; else return false;
+        }
+
+        public static int GetTotalReadyBuffers(List<AudioBufferQueueItem> bufferList)
+        {
+            int readyCount = 0;
+            foreach (AudioBufferQueueItem audbuffer in loadedAudioBuffers)
+            {
+                if (audbuffer.bufferStatus == AudioBufferStatus.Ready)
+                {
+                    readyCount++;
+                }
+            }
+
+            return readyCount;
+        }
+
         public static void ChangePosition(long pos)
         {
             positionOffset = pos;
             AudioFileReader audioFileReader = new AudioFileReader(usedAudioDef.audioFilePath);
+            audioStreamReader = audioFileReader;
             //AudioFileReader audioFileReader = new AudioFileReader(bufferedItem.audioDefinition.audioFilePath);
             long desiredPositionInBytes = (long)(pos * (audioFileReader.WaveFormat.AverageBytesPerSecond / 1000.0));
             audioFileReader.Position = desiredPositionInBytes;
@@ -260,12 +301,14 @@ namespace WaveZtream
                     audioHandler.Init(audioFileReader);
                 }*/
 
+                audioHandler.Dispose();
                 audioHandler = new WaveOutEvent();
                 audioHandler.Init(audioFileReader);
             }
             catch //(Exception ex)
             {
                 //Console.WriteLine(ex.ToString());
+                audioHandler.Dispose();
                 audioHandler = new WaveOutEvent();
                 audioHandler.Init(audioFileReader);
             }
@@ -295,6 +338,8 @@ namespace WaveZtream
             long desiredPositionInBytes = (long)(0 * (audioFileReader.WaveFormat.AverageBytesPerSecond / 1000.0));
             audioFileReader.Position = desiredPositionInBytes;
             audioHandler.Stop();
+            audioHandler.Dispose();
+            audioHandler = new WaveOutEvent();
             audioHandler.Init(audioFileReader);
             audioHandler.Play();
         }

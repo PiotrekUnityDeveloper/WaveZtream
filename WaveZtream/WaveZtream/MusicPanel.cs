@@ -27,18 +27,17 @@ namespace WaveZtream
             InitializeComponent();
             instance = this;
             objlistview = objectListView1;
-            ProgramManager.SetTitlebarDarkTheme(true);
+            //ProgramManager.SetTitlebarDarkTheme(true);
         }
 
-        public static string[] musicLocation = { "C:\\Users\\Piotr\\Music" };
-        public static List<AudioDefinition> audioFiles = new List<AudioDefinition>();
-        public static MetadataHadlingMode metaHandling = MetadataHadlingMode.TrySeparate;
         public static List<Image> covers = new List<Image>();
         public static AudioDefinition currentDefinition = null;
 
         private void MusicPanel_Load(object sender, EventArgs e)
         {
             Start();
+
+            // TODO: MOVE ALL THIS TO A LAYOUT MANAGER
 
             radDock1.Dock = DockStyle.Fill;
 
@@ -47,8 +46,9 @@ namespace WaveZtream
             radDock1.AddDocument(myAudio);
             myAudio.Show();
             myAudio.Controls.Add(kryptonPanel5);
-            myAudio.Controls.Add(kryptonButton1);
-            myAudio.Controls.Add(kryptonButton2);
+            //myAudio.Controls.Add(kryptonButton5);
+            //myAudio.Controls.Add(kryptonButton2);
+            //myAudio.Controls.Add(kryptonButton4);
             myAudio.Text = "My Audio";
             myAudio.BackColor = Color.Black;
             //myAudio.Width = objectListView1.Width;
@@ -56,8 +56,9 @@ namespace WaveZtream
             kryptonPanel5.Parent = myAudio;
             kryptonPanel5.Location = new Point(0, 0);
             kryptonPanel5.Dock = DockStyle.Fill;
-            kryptonButton1.BringToFront();
+            kryptonButton5.BringToFront();
             kryptonButton2.BringToFront();
+            kryptonButton4.BringToFront();
 
             // Playback Manager Window
             DocumentWindow playbackManager = new DocumentWindow();
@@ -96,7 +97,7 @@ namespace WaveZtream
                 item.HeaderFormatStyle = headerstyle;
             }
 
-            await LibraryManager.GetAudioFiles(musicLocation.ToList());
+            await LibraryManager.GetAudioFiles();
         }
 
         private void sld_AudioPosition_Click(object sender, EventArgs e)
@@ -145,9 +146,13 @@ namespace WaveZtream
             }
         }
 
+        
+
         private void audioUpdate_Tick(object sender, EventArgs e)
         {
             UpdateTrackPosition();
+            QueueManager.CheckForNextSongPreLoad();
+            QueueManager.CheckForNextSongPrePlay();
         }
 
         private void kryptonTrackBar1_MouseEnter(object sender, EventArgs e)
