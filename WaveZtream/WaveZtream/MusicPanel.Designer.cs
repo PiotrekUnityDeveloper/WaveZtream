@@ -137,6 +137,7 @@
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.tieAMusicVideoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new Accord.Controls.PictureBox();
+            this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDockableNavigator1)).BeginInit();
             this.kryptonDockableNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
@@ -411,6 +412,7 @@
             this.objectListView1.UseHyperlinks = true;
             this.objectListView1.View = System.Windows.Forms.View.Details;
             this.objectListView1.SelectedIndexChanged += new System.EventHandler(this.objectListView1_SelectedIndexChanged);
+            this.objectListView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.objectListView1_MouseDown);
             // 
             // indexColumn
             // 
@@ -435,7 +437,7 @@
             // 
             this.fileNameColumn.AspectName = "audioFileName";
             this.fileNameColumn.Text = "File Name";
-            this.fileNameColumn.Width = 94;
+            this.fileNameColumn.Width = 91;
             // 
             // fileExtension
             // 
@@ -555,6 +557,7 @@
             // kryptonPage3
             // 
             this.kryptonPage3.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage3.Controls.Add(this.kryptonButton1);
             this.kryptonPage3.Controls.Add(this.kryptonButton5);
             this.kryptonPage3.Controls.Add(this.kryptonButton4);
             this.kryptonPage3.Controls.Add(this.kryptonButton2);
@@ -570,7 +573,7 @@
             // 
             // kryptonButton5
             // 
-            this.kryptonButton5.Location = new System.Drawing.Point(178, 537);
+            this.kryptonButton5.Location = new System.Drawing.Point(152, 566);
             this.kryptonButton5.Name = "kryptonButton5";
             this.kryptonButton5.PaletteMode = Krypton.Toolkit.PaletteMode.Microsoft365BlackDarkMode;
             this.kryptonButton5.Size = new System.Drawing.Size(127, 23);
@@ -580,7 +583,7 @@
             // 
             // kryptonButton4
             // 
-            this.kryptonButton4.Location = new System.Drawing.Point(45, 535);
+            this.kryptonButton4.Location = new System.Drawing.Point(285, 566);
             this.kryptonButton4.Name = "kryptonButton4";
             this.kryptonButton4.PaletteMode = Krypton.Toolkit.PaletteMode.Microsoft365BlackDarkMode;
             this.kryptonButton4.Size = new System.Drawing.Size(127, 23);
@@ -590,7 +593,7 @@
             // 
             // kryptonButton2
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(311, 535);
+            this.kryptonButton2.Location = new System.Drawing.Point(19, 566);
             this.kryptonButton2.Name = "kryptonButton2";
             this.kryptonButton2.PaletteMode = Krypton.Toolkit.PaletteMode.Microsoft365BlackDarkMode;
             this.kryptonButton2.Size = new System.Drawing.Size(127, 23);
@@ -676,7 +679,7 @@
             // 
             this.olvColumn4.AspectName = "audioFileName";
             this.olvColumn4.Text = "File Name";
-            this.olvColumn4.Width = 94;
+            this.olvColumn4.Width = 103;
             // 
             // contextMenuStrip1
             // 
@@ -760,6 +763,7 @@
             this.addToMainQueueToolStripMenuItem.Name = "addToMainQueueToolStripMenuItem";
             this.addToMainQueueToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.addToMainQueueToolStripMenuItem.Text = "Add To Main Queue";
+            this.addToMainQueueToolStripMenuItem.Click += new System.EventHandler(this.addToMainQueueToolStripMenuItem_Click);
             // 
             // addToCustomQueueToolStripMenuItem
             // 
@@ -1068,6 +1072,16 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
             // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Location = new System.Drawing.Point(152, 519);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.PaletteMode = Krypton.Toolkit.PaletteMode.Microsoft365BlackDarkMode;
+            this.kryptonButton1.Size = new System.Drawing.Size(127, 23);
+            this.kryptonButton1.TabIndex = 10;
+            this.kryptonButton1.Values.Text = "Autoplay";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click_1);
+            // 
             // MusicPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1236,5 +1250,6 @@
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox9;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox8;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox7;
+        private Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }

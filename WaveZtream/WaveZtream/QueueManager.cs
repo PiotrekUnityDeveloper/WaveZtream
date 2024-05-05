@@ -16,6 +16,36 @@ namespace WaveZtream
             queue.queueItems.Add(new AudioQueueItem { queueItemType = AudioQueueItemType.Audio, 
                 audioDefinition = audio,
                 queueIndex = queue.queueItems.Count - 1 });
+
+            PlaybackManager.AddAudioToBuffer(audio, new QueuedBuffer());
+            SortQueuedBuffers();
+        }
+
+        public static void SortQueuedBuffers()
+        {
+            List<QueuedBuffer> queuedBuffers = new List<QueuedBuffer>();
+            List<StreakBuffer> streakBuffers = new List<StreakBuffer>();
+
+            foreach(AudioBufferQueueItem aitem in PlaybackManager.loadedAudioBuffers)
+            {
+                if(aitem is QueuedBuffer qbuffer)
+                {
+                    queuedBuffers.Add(qbuffer);
+                }
+                else if(aitem is StreakBuffer sbuffer)
+                {
+                    streakBuffers.Add(sbuffer);
+                }
+            }
+
+            //List<AudioBufferQueueItem> sortedBuffers = new List<AudioBufferQueueItem>();
+            //sortedBuffers.AddRange(queuedBuffers);
+            //sortedBuffers.AddRange(streakBuffers);
+
+            PlaybackManager.loadedAudioBuffers.Clear();
+            //PlaybackManager.loadedAudioBuffers = sortedBuffers;
+            PlaybackManager.loadedAudioBuffers.AddRange(queuedBuffers);
+            PlaybackManager.loadedAudioBuffers.AddRange(streakBuffers);
         }
 
         public static AudioDefinition GetNextSong()
@@ -25,14 +55,16 @@ namespace WaveZtream
                 return GetRandomSongFromMainLibrary();
             }
 
-            return mainQueue.queueItems[0].audioDefinition;
+            return GetNextSongFromQueue();
         }
 
         public static AudioDefinition GetNextSongFromQueue()
         {
             if (mainQueue.queueItems.Count > 0)
             {
-                return mainQueue.queueItems[0].audioDefinition;
+                AudioDefinition def0 = mainQueue.queueItems[0].audioDefinition;
+                mainQueue.queueItems.RemoveAt(0);
+                return def0;
             }
 
             return null;
@@ -75,9 +107,11 @@ namespace WaveZtream
                             PlaybackManager.LoadNextAudioFromBuffer();
                         }
                         else { /*TODO: GET RANDOM SONG OR FROM QUEUE*/
-                            PlaybackManager.AddAudioToBuffer(GetNextSong());
+                            PlaybackManager.AddAudioToBuffer(GetNextSong(), new StreakBuffer());
                             PlaybackManager.LoadNextAudioFromBuffer();
                         }
+
+                        //await Task.Delay(1000);
                     }
 
                     buffersQueued = true;

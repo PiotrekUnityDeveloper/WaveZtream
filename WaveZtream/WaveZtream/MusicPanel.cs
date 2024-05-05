@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,10 @@ namespace WaveZtream
         public static MusicPanel instance;
         public static ObjectListView objlistview;
 
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool AllocConsole();
+
         public MusicPanel()
         {
             InitializeComponent();
@@ -35,6 +40,8 @@ namespace WaveZtream
 
         private void MusicPanel_Load(object sender, EventArgs e)
         {
+            //AllocConsole();
+
             Start();
 
             // TODO: MOVE ALL THIS TO A LAYOUT MANAGER
@@ -90,6 +97,14 @@ namespace WaveZtream
         public async void Start()
         {
             foreach (OLVColumn item in objectListView1.Columns)
+            {
+                var headerstyle = new HeaderFormatStyle();
+                headerstyle.SetBackColor(Color.DarkBlue);
+                headerstyle.SetForeColor(Color.SlateGray);
+                item.HeaderFormatStyle = headerstyle;
+            }
+
+            foreach (OLVColumn item in objectListView2.Columns)
             {
                 var headerstyle = new HeaderFormatStyle();
                 headerstyle.SetBackColor(Color.DarkBlue);
@@ -223,7 +238,7 @@ namespace WaveZtream
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
             AudioDefinition newdef = LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text));
-            PlaybackManager.AddAudioToBuffer(newdef);
+            PlaybackManager.AddAudioToBuffer(newdef, new QueuedBuffer());
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)
@@ -245,9 +260,40 @@ namespace WaveZtream
         private void kryptonButton6_Click(object sender, EventArgs e)
         {
             AudioDefinition newdef = LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text));
-            PlaybackManager.AddAudioToBuffer(newdef);
+            PlaybackManager.AddAudioToBuffer(newdef, new QueuedBuffer());
             PlaybackManager.LoadNextAudioFromBuffer();
             PlaybackManager.PlayNextAudioFromBuffer();
+        }
+
+        private void objectListView1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Right)
+            {
+                contextMenuStrip1.Show(Cursor.Position);
+            }
+        }
+
+        private void addToMainQueueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AudioDefinition newdef = LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text));
+            QueueManager.AddAudioToQueue(QueueManager.mainQueue, newdef);
+        }
+
+        private void kryptonButton1_Click_1(object sender, EventArgs e)
+        {
+            AutoPlay();
+        }
+
+        private async void AutoPlay()
+        {
+            // Add to buffer
+            AudioDefinition newdef = LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text));
+            PlaybackManager.AddAudioToBuffer(newdef, new QueuedBuffer());
+
+            await Task.Delay(500);
+
+            // Load with autoplay
+            PlaybackManager.AutoPlayNextAudioFromBuffer();
         }
     }
 

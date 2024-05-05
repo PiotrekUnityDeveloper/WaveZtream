@@ -2,6 +2,7 @@
 using NAudio.Gui;
 using NAudio.Wave;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -122,7 +123,7 @@ namespace WaveZtream
             Console.WriteLine("Playing a new buffered audio");
         }
 
-        public static void AddAudioToBuffer(AudioDefinition audio)
+        public static void AddAudioToBuffer(AudioDefinition audio, AudioBufferQueueItem bufferListType)
         {
             // THREADED
             new Thread(() =>
@@ -131,13 +132,26 @@ namespace WaveZtream
 
                 if (audio.audioSourceType == AudioSourceType.LocalFile)
                 {
-                    loadedAudioBuffers.Add(new AudioBufferQueueItem
+                    if(bufferListType.GetType() == typeof(QueuedBuffer))
                     {
-                        key = audio.audioFileName,
-                        audioDefinition = audio,
-                        audioOutput = new WaveOutEvent(), // MODIFIED
-                        bufferStatus = AudioBufferStatus.Waiting
-                    });
+                        loadedAudioBuffers.Add(new QueuedBuffer
+                        {
+                            key = audio.audioFileName,
+                            audioDefinition = audio,
+                            audioOutput = new WaveOutEvent(), // MODIFIED
+                            bufferStatus = AudioBufferStatus.Waiting
+                        });
+                    }
+                    else
+                    {
+                        loadedAudioBuffers.Add(new StreakBuffer
+                        {
+                            key = audio.audioFileName,
+                            audioDefinition = audio,
+                            audioOutput = new WaveOutEvent(), // MODIFIED
+                            bufferStatus = AudioBufferStatus.Waiting
+                        });
+                    }
 
                     Console.WriteLine("Added a new localfile audio to the buffer queue");
                 }
@@ -145,14 +159,16 @@ namespace WaveZtream
             }).Start();
         }
 
-        public static void LoadNextAudioFromBuffer()
+        private BlockingCollection<Action> _actions = new BlockingCollection<Action>();
+
+        public static void LoadNextAudioFromBuffer(bool autoPlay = false)
         {
             // THREADED
             new Thread(() =>
             {
                 Thread.CurrentThread.IsBackground = true;
 
-                AudioBufferQueueItem finishingBufferItem = GetFirstMatchingBuffer(AudioBufferStatus.Playing, loadedAudioBuffers);
+                AudioBufferQueueItem finishingBufferItem = GetFirstMatchingBuffer(AudioBufferStatus.Playing, playingAudioBuffers);
                 AudioBufferQueueItem loadedBufferItem = GetFirstMatchingBuffer(AudioBufferStatus.Waiting, loadedAudioBuffers);
 
                 if(loadedBufferItem == null) return;
@@ -186,6 +202,20 @@ namespace WaveZtream
                         //loadedAudioBuffers.Remove(loadedBufferItem);
 
                         Console.WriteLine("Loaded the next audio from the buffered queue");
+
+                        if (autoPlay)
+                        {
+                            //PlaybackManager.PlayNextAudioFromBuffer();
+
+                            /*
+                             System.Threading.SynchronizationContext.Current.Post(_ =>
+                             {
+                                 PlaybackManager.PlayNextAudioFromBuffer();
+                             }, null);*/
+
+                            
+                        }
+
                         return;
                     }
                     else
@@ -212,11 +242,116 @@ namespace WaveZtream
                         //loadedAudioBuffers.Remove(loadedBufferItem);
 
                         Console.WriteLine("Loaded the next audio from the buffered queue");
+
+                        if (autoPlay)
+                        {
+                            //PlaybackManager.PlayNextAudioFromBuffer();
+
+                            /*
+                            System.Threading.SynchronizationContext.Current.Post(_ =>
+                            {
+                                PlaybackManager.PlayNextAudioFromBuffer();
+                            }, null);*/
+                        }
+
                         return;
                     }
 
                 }
+
             }).Start();
+        }
+
+        public static async void AutoPlayNextAudioFromBuffer()
+        {
+            // THREADED
+            await Task.Run(() =>
+            {
+                Thread.CurrentThread.IsBackground = true;
+
+                AudioBufferQueueItem finishingBufferItem = GetFirstMatchingBuffer(AudioBufferStatus.Playing, playingAudioBuffers);
+                AudioBufferQueueItem loadedBufferItem = GetFirstMatchingBuffer(AudioBufferStatus.Waiting, loadedAudioBuffers);
+
+                if (loadedBufferItem == null) return;
+
+                if (loadedBufferItem.audioDefinition.audioSourceType == AudioSourceType.LocalFile)
+                {
+                    AudioFileReader audioFileReader = new AudioFileReader(loadedAudioBuffers[0].audioDefinition.audioFilePath);
+                    WaveOutEvent waveOut = new WaveOutEvent();
+
+                    //audioStreamReader = audioFileReader;
+
+                    waveOut.Init(audioFileReader);
+
+                    if (audioHandler == null)
+                    {
+                        Console.WriteLine("Loading the next audio from the buffered queue...");
+
+                        audioBuffersToDispose.Add(finishingBufferItem);
+                        //audioHandler = waveOut;
+                        loadedBufferItem.bufferStatus = AudioBufferStatus.Loading;
+                        loadedBufferItem.audioOutput = waveOut;
+                        loadedBufferItem.audioLength = (int)audioFileReader.TotalTime.TotalMilliseconds;
+                        loadedBufferItem.bufferStatus = AudioBufferStatus.Loaded;
+                        bufferedItem = loadedBufferItem;
+                        //usedAudioDef = loadedBufferItem.audioDefinition;
+                        //loadedAudioBuffers.RemoveAt(0);
+
+                        loadedBufferItem.bufferStatus = AudioBufferStatus.Ready;
+
+                        playingAudioBuffers.Add(loadedBufferItem);
+                        //loadedAudioBuffers.Remove(loadedBufferItem);
+
+                        Console.WriteLine("Loaded the next audio from the buffered queue");
+
+                        MusicPanel.instance.Invoke((MethodInvoker)delegate
+                        {
+                            PlaybackManager.PlayNextAudioFromBuffer();
+                        });
+
+                        return;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Loading the next audio from the buffered queue...");
+
+                        WaveOutEvent oldAudioInstance = new WaveOutEvent();
+                        oldAudioInstance = audioHandler;
+
+                        audioBuffersToDispose.Add(finishingBufferItem);
+                        loadedBufferItem.bufferStatus = AudioBufferStatus.Loading;
+                        loadedBufferItem.audioOutput = waveOut;
+                        loadedBufferItem.audioLength = (int)audioFileReader.TotalTime.TotalMilliseconds;
+                        loadedBufferItem.bufferStatus = AudioBufferStatus.Loaded;
+                        bufferedItem = loadedBufferItem;
+                        //usedAudioDef = loadedBufferItem.audioDefinition;
+                        //loadedAudioBuffers.RemoveAt(0); //?
+
+                        AddAudioOutputToDisposal(oldAudioInstance);
+
+                        loadedBufferItem.bufferStatus = AudioBufferStatus.Ready;
+
+                        playingAudioBuffers.Add(loadedBufferItem);
+                        //loadedAudioBuffers.Remove(loadedBufferItem);
+
+                        Console.WriteLine("Loaded the next audio from the buffered queue");
+
+                        MusicPanel.instance.Invoke((MethodInvoker)delegate
+                        {
+                            PlaybackManager.PlayNextAudioFromBuffer();
+                        });
+
+                        return;
+                    }
+
+                }
+
+            });
+        }
+
+        public void Invoke(Action action)
+        {
+            _actions.Add(action);
         }
 
         public static bool IsWaitingAudioBufferEmpty()
@@ -358,6 +493,15 @@ namespace WaveZtream
         public int audioLength;
         public AudioBufferStatus bufferStatus;
     }
+
+    public class QueuedBuffer : AudioBufferQueueItem // the audio from the queue type of buffer
+    {
+    }// for identification
+
+    public class StreakBuffer : AudioBufferQueueItem // the random audio LibraryManager returns when the queue is empty,
+                              //                       and the infinite play is on
+    {
+    }// for indentification
 
     public enum AudioBufferStatus
     {
