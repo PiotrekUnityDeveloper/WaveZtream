@@ -11,6 +11,7 @@ Current features:
 - Audio/Song Queue
 - Managing Audio Buffers (Waiting, Ready, Playing etc.)
 - Multiple song can play at the same time
+- Getting song metadata
 
 Planned features:
 - Fading in/out, Lowpass in/out etc. Effects for transitions between audio
@@ -18,3 +19,4 @@ Planned features:
 - Audio Cutting (cut out unnecessary parts, when the file has an unwated intro/outro/pause)
 - Automatic Audio Normalisation (fix some of your audio being too quiet and some too loud)
 - (NOT SURE) Sharing files? custom network? embedded internet library?
+- Ability to set custom transition for each file individually
