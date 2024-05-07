@@ -142,7 +142,7 @@ namespace WaveZtream
                             bufferStatus = AudioBufferStatus.Waiting
                         });
                     }
-                    else
+                    else if (bufferListType.GetType() == typeof(StreakBuffer))
                     {
                         loadedAudioBuffers.Add(new StreakBuffer
                         {
@@ -152,8 +152,20 @@ namespace WaveZtream
                             bufferStatus = AudioBufferStatus.Waiting
                         });
                     }
+                    else if (bufferListType.GetType() == typeof(RequestBuffer))
+                    {
+                        loadedAudioBuffers.Add(new RequestBuffer
+                        {
+                            key = audio.audioFileName,
+                            audioDefinition = audio,
+                            audioOutput = new WaveOutEvent(), // MODIFIED
+                            bufferStatus = AudioBufferStatus.Waiting
+                        });
+                    }
 
                     Console.WriteLine("Added a new localfile audio to the buffer queue");
+
+                    //QueueManager.SortQueuedBuffers();
                 }
                 
             }).Start();
@@ -500,6 +512,13 @@ namespace WaveZtream
 
     public class StreakBuffer : AudioBufferQueueItem // the random audio LibraryManager returns when the queue is empty,
                               //                       and the infinite play is on
+    {
+    }// for indentification
+
+    public class RequestBuffer : AudioBufferQueueItem // this buffer type is used when, the audio is requested on demand.
+                                                     //  it means, when there is a queue and/or a streakqueue, they wont be affected
+                                                     //  and the audio will play independently of it.
+                                                     //  (NOTE: there should be only one of this type at a time in a queue buffer)
     {
     }// for indentification
 

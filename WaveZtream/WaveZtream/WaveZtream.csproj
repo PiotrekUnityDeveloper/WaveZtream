@@ -520,6 +520,48 @@
   <ItemGroup>
     <None Include="Resources\User.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AutoStop0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AutoStop1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AutoStopActive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AutoStopInactive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpeakerIssue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpeakerOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpeakerOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpeakerOnOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpeakerWarning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Volume0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Volume1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Volume2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Volume3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VolumeOff.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Accord.3.8.2-alpha\build\Accord.targets" Condition="Exists('..\packages\Accord.3.8.2-alpha\build\Accord.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -193,6 +193,8 @@ namespace WaveZtream
                 MusicPanel.objlistview.Items[i].ImageIndex = i;
             }
 
+            MusicPanel.objlistview.SmallImageList.ImageSize = new Size(16, 16);
+
             MusicPanel.objlistview.Refresh();
         }
 

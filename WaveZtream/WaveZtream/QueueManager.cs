@@ -25,8 +25,9 @@ namespace WaveZtream
         {
             List<QueuedBuffer> queuedBuffers = new List<QueuedBuffer>();
             List<StreakBuffer> streakBuffers = new List<StreakBuffer>();
+            List<RequestBuffer> requestBuffers = new List<RequestBuffer>();
 
-            foreach(AudioBufferQueueItem aitem in PlaybackManager.loadedAudioBuffers)
+            foreach (AudioBufferQueueItem aitem in PlaybackManager.loadedAudioBuffers)
             {
                 if(aitem is QueuedBuffer qbuffer)
                 {
@@ -36,6 +37,10 @@ namespace WaveZtream
                 {
                     streakBuffers.Add(sbuffer);
                 }
+                else if (aitem is RequestBuffer rbuffer)
+                {
+                    requestBuffers.Add(rbuffer);
+                }
             }
 
             //List<AudioBufferQueueItem> sortedBuffers = new List<AudioBufferQueueItem>();
@@ -44,6 +49,7 @@ namespace WaveZtream
 
             PlaybackManager.loadedAudioBuffers.Clear();
             //PlaybackManager.loadedAudioBuffers = sortedBuffers;
+            PlaybackManager.loadedAudioBuffers.AddRange(requestBuffers);
             PlaybackManager.loadedAudioBuffers.AddRange(queuedBuffers);
             PlaybackManager.loadedAudioBuffers.AddRange(streakBuffers);
         }

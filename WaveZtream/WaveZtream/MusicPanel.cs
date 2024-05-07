@@ -92,6 +92,8 @@ namespace WaveZtream
             this.radDock1.DockWindow(playbackManager, DockPosition.Right);
             myAudio.TabStrip.SizeInfo.SizeMode = SplitPanelSizeMode.Relative;
             myAudio.TabStrip.SizeInfo.RelativeRatio = new SizeF(0.43f, 0);
+
+            //objectListView1.SmallImageList.ImageSize = new Size(16, 16);
         }
 
         public async void Start()
@@ -288,7 +290,8 @@ namespace WaveZtream
         {
             // Add to buffer
             AudioDefinition newdef = LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text));
-            PlaybackManager.AddAudioToBuffer(newdef, new QueuedBuffer());
+            PlaybackManager.AddAudioToBuffer(newdef, new RequestBuffer());
+            QueueManager.SortQueuedBuffers();
 
             await Task.Delay(500);
 
