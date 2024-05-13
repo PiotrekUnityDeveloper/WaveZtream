@@ -211,6 +211,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AudioTransition.cs" />
     <Compile Include="Control_AccountEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>

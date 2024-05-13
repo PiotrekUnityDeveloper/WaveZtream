@@ -28,8 +28,10 @@ namespace WaveZtream
         public static AudioFileReader audioStreamReader = null;
 
         public static WaveOutEvent audioHandler = null;
+        //public static WaveOutEvent oldAudioHandler = null;
         public static long positionOffset = 0;
         private static AudioDefinition usedAudioDef = null;
+        public static List<WaveOutEvent> oldWaveOuts = new List<WaveOutEvent>();
 
         public static void PlayAudio(AudioDefinition auddef)
         {
@@ -89,9 +91,69 @@ namespace WaveZtream
             }
         }
 
+        public static void StartAudioTransition(bool In)
+        {           
+
+            if (In)
+            {
+                
+
+                if (SettingsManager.PlaybackSettings.transitionTypeIn == TransitionType.Fade)
+                {
+                    AudioTransition.VolumeFadeIn inFadeTransition = new AudioTransition.VolumeFadeIn(audioHandler, TimeSpan.FromSeconds(SettingsManager.PlaybackSettings.transitionOutDuration));
+                    inFadeTransition.Start();
+                }
+            }
+            else
+            {
+
+                if (SettingsManager.PlaybackSettings.transitionTypeOut == TransitionType.Fade)
+                {
+                    AudioTransition.VolumeFadeOut outFadeTransition = new AudioTransition.VolumeFadeOut(oldWaveOuts[oldWaveOuts.Count - 1], TimeSpan.FromSeconds(SettingsManager.PlaybackSettings.transitionOutDuration));
+                    outFadeTransition.Start();
+                }
+            }
+        }
+
+        public static void PerformCustomFadeOut(WaveOutEvent outevent)
+        {
+            if (SettingsManager.PlaybackSettings.transitionTypeOut == TransitionType.Fade)
+            {
+                AudioTransition.VolumeFadeOut outFadeTransition = new AudioTransition.VolumeFadeOut(outevent, TimeSpan.FromSeconds(SettingsManager.PlaybackSettings.transitionOutDuration));
+                outFadeTransition.Start();
+            }
+        }
+
+        public static WaveOutEvent RetrieveOldAudioOutput(WaveOutEvent woeTarget)
+        {
+            foreach(WaveOutEvent woe in oldWaveOuts)
+            {
+                if(woe == woeTarget)
+                {
+                    return woe;
+                }
+            }
+
+            return null;
+        }
+
         public static void PlayNextAudioFromBuffer()
         {
             Console.WriteLine("Playing audio...");
+
+            //WaveOutEvent oldevent = audioHandler;
+            //oldWaveOuts.Add(oldevent);
+
+            if (SettingsManager.PlaybackSettings.transitionTimingOut == TransitionTiming.onPlay)
+            {
+                if(audioHandler != null)
+                {
+                    StartAudioTransition(false);
+                    //PerformCustomFadeOut(oldWaveOuts[0]);
+                }
+            }
+
+            //oldAudioHandler = bufferedItem.audioOutput;
 
             AudioBufferQueueItem bufferItem = GetFirstMatchingBuffer(AudioBufferStatus.Ready, playingAudioBuffers);
 
@@ -117,6 +179,7 @@ namespace WaveZtream
 
             MusicPanel.instance.InitializeSong(bufferItem.audioLength);
 
+            StartAudioTransition(true);
             audioHandler.Play();
 
             loadedAudioBuffers.Remove(bufferItem);
@@ -194,11 +257,15 @@ namespace WaveZtream
 
                     waveOut.Init(audioFileReader);
 
+                    oldWaveOuts.Add(waveOut);
+
                     if(audioHandler == null)
                     {
                         Console.WriteLine("Loading the next audio from the buffered queue...");
 
-                        audioBuffersToDispose.Add(finishingBufferItem);
+                        //finishingBufferItem.bufferStatus = AudioBufferStatus.Finishing;
+                        //audioBuffersToDispose.Add(finishingBufferItem);
+
                         //audioHandler = waveOut;
                         loadedBufferItem.bufferStatus = AudioBufferStatus.Loading;
                         loadedBufferItem.audioOutput = waveOut;
@@ -237,6 +304,7 @@ namespace WaveZtream
                         WaveOutEvent oldAudioInstance = new WaveOutEvent();
                         oldAudioInstance = audioHandler;
 
+                        //finishingBufferItem.bufferStatus = AudioBufferStatus.Finishing; needed?
                         audioBuffersToDispose.Add(finishingBufferItem);
                         loadedBufferItem.bufferStatus = AudioBufferStatus.Loading;
                         loadedBufferItem.audioOutput = waveOut;
