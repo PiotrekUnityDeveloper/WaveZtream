@@ -134,8 +134,8 @@ namespace WaveZtream
 
         private void button1_Click(object sender, EventArgs e)
         {
-            currentDefinition = LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text));
-            PlaybackManager.PlayAudio(LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text)));
+            ///currentDefinition = LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text));
+            ///PlaybackManager.PlayAudio(LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text)));
         }
 
         public void InitializeSong(int maxLength)
@@ -153,9 +153,9 @@ namespace WaveZtream
 
         public void UpdateTrackPosition()
         {
-            if (PlaybackManager.audioHandler != null && PlaybackManager.audioHandler.PlaybackState == PlaybackState.Playing)
+            if (PlaybackManager.GetLatestOutput() != null && PlaybackManager.GetLatestOutput().output.PlaybackState == PlaybackState.Playing)
             {
-                int val = (int)(PlaybackManager.positionOffset + PlaybackManager.audioHandler.GetPositionTimeSpan().TotalMilliseconds);
+                int val = (int)(PlaybackManager.positionOffset + PlaybackManager.GetLatestOutput().output.GetPositionTimeSpan().TotalMilliseconds);
                 if(val <= sld_audioPosition.Maximum)
                 {
                     sld_audioPosition.Value = val;
@@ -245,8 +245,8 @@ namespace WaveZtream
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
-            currentDefinition = LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text));
-            PlaybackManager.PlayAudio(LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text)));
+            ///currentDefinition = LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text));
+            ///PlaybackManager.PlayAudio(LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text)));
         }
 
         private void kryptonButton4_Click(object sender, EventArgs e)
@@ -297,6 +297,16 @@ namespace WaveZtream
 
             // Load with autoplay
             PlaybackManager.AutoPlayNextAudioFromBuffer();
+        }
+
+        public void AddWaveOutputToList(string fpath)
+        {
+            listBox1.Items.Add(fpath);
+        }
+
+        public void RemoveWaveOutputFromList(string fpath)
+        {
+            listBox1.Items.Remove(fpath);
         }
     }
 

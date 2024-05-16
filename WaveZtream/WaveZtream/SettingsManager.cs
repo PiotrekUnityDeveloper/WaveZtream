@@ -37,7 +37,7 @@ namespace WaveZtream
             public static float customOutTime;
 
             public static float transitionInDuration = 2.0f;
-            public static float transitionOutDuration = 5.0f;
+            public static float transitionOutDuration = 3.0f;
         }
 
         public class LibrarySettings
