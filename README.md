@@ -13,8 +13,11 @@ Current features:
 - Multiple song can play at the same time
 - Getting song metadata
 
-Planned features:
+Features we are implementing right now:
 - Fading in/out, Lowpass in/out etc. Effects for transitions between audio
+- User Interface optimization and layout
+
+Planned features:
 - GUI for buffer management (will be used for greater control over multiple playing audios)
 - Audio Cutting (cut out unnecessary parts, when the file has an unwated intro/outro/pause)
 - Automatic Audio Normalisation (fix some of your audio being too quiet and some too loud)
