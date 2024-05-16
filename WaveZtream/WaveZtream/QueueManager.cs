@@ -81,6 +81,11 @@ namespace WaveZtream
             return LibraryManager.GetRandomAudioFromMainLibrary();
         }
 
+        public static AudioOutput GetLatestOutput()
+        {
+            return PlaybackManager.audioHandlers[PlaybackManager.audioHandlers.Count - 1];
+        }
+
         // PRELOADING BUFFERS
 
         private static bool buffersQueued = false;
@@ -89,11 +94,11 @@ namespace WaveZtream
         {
             //Console.WriteLine("Checking for a preload...");
 
-            if(PlaybackManager.audioHandler.PlaybackState == NAudio.Wave.PlaybackState.Stopped)
+            if (GetLatestOutput().output.PlaybackState == NAudio.Wave.PlaybackState.Stopped)
                 return;
 
             if ((PlaybackManager.audioStreamReader.TotalTime.TotalMilliseconds -
-                (PlaybackManager.audioHandler.GetPositionTimeSpan().TotalMilliseconds + PlaybackManager.positionOffset)) <= SettingsManager.PlaybackSettings.preLoadDelay * 1000)
+                (GetLatestOutput().output.GetPositionTimeSpan().TotalMilliseconds + PlaybackManager.positionOffset)) <= SettingsManager.PlaybackSettings.preLoadDelay * 1000)
             {
                 if(buffersQueued) return;
 
@@ -129,11 +134,11 @@ namespace WaveZtream
         {
             //Console.WriteLine("Loading preplay...");
 
-            if (PlaybackManager.audioHandler.PlaybackState == NAudio.Wave.PlaybackState.Stopped)
+            if (GetLatestOutput().output.PlaybackState == NAudio.Wave.PlaybackState.Stopped)
                 return;
 
             if ((PlaybackManager.audioStreamReader.TotalTime.TotalMilliseconds -
-                (PlaybackManager.audioHandler.GetPositionTimeSpan().TotalMilliseconds + PlaybackManager.positionOffset)) <= SettingsManager.PlaybackSettings.prePlayDelay * 1000)
+                (GetLatestOutput().output.GetPositionTimeSpan().TotalMilliseconds + PlaybackManager.positionOffset)) <= SettingsManager.PlaybackSettings.prePlayDelay * 1000)
             {
                 Console.WriteLine("Loading preplay...");
 
