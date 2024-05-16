@@ -1,4 +1,5 @@
-﻿using Accord.Statistics.Kernels;
+﻿using Accord.IO;
+using Accord.Statistics.Kernels;
 using NAudio.Gui;
 using NAudio.Wave;
 using System;
@@ -31,7 +32,7 @@ namespace WaveZtream
         //public static WaveOutEvent oldAudioHandler = null;
         public static long positionOffset = 0;
         private static AudioDefinition usedAudioDef = null;
-        public static List<WaveOutEvent> oldWaveOuts = new List<WaveOutEvent>();
+        public static List<OutputIDf> oldWaveOuts = new List<OutputIDf>();
 
         public static void PlayAudio(AudioDefinition auddef)
         {
@@ -91,7 +92,7 @@ namespace WaveZtream
             }
         }
 
-        public static void StartAudioTransition(bool In)
+        public static void StartAudioTransition(bool In, string idfsrc = null)
         {           
 
             if (In)
@@ -109,10 +110,39 @@ namespace WaveZtream
 
                 if (SettingsManager.PlaybackSettings.transitionTypeOut == TransitionType.Fade)
                 {
-                    AudioTransition.VolumeFadeOut outFadeTransition = new AudioTransition.VolumeFadeOut(oldWaveOuts[oldWaveOuts.Count - 1], TimeSpan.FromSeconds(SettingsManager.PlaybackSettings.transitionOutDuration));
+                    AudioTransition.VolumeFadeOut outFadeTransition = new AudioTransition.VolumeFadeOut(GetOutputBySource(idfsrc, true).waveOutput, TimeSpan.FromSeconds(SettingsManager.PlaybackSettings.transitionOutDuration));
                     outFadeTransition.Start();
+                    //remove from list?
+                    //MusicPanel.instance.RemoveWaveOutputFromList();
                 }
             }
+        }
+
+        public static OutputIDf GetOutputBySource(string src, bool remove = false)
+        {
+            OutputIDf removable = null;
+
+            foreach(OutputIDf idf in oldWaveOuts)
+            {
+                if(idf.source == src)
+                {
+                    if (remove)
+                    {
+                        removable = idf;
+                        break;
+                    }
+                    else
+                    {
+                        return idf;
+                    }
+                    
+                }
+            }
+
+            oldWaveOuts.Remove(removable);
+            return removable;
+
+            //return null;
         }
 
         public static void PerformCustomFadeOut(WaveOutEvent outevent)
@@ -124,6 +154,7 @@ namespace WaveZtream
             }
         }
 
+        /*
         public static WaveOutEvent RetrieveOldAudioOutput(WaveOutEvent woeTarget)
         {
             foreach(WaveOutEvent woe in oldWaveOuts)
@@ -136,19 +167,24 @@ namespace WaveZtream
 
             return null;
         }
+        */
 
         public static void PlayNextAudioFromBuffer()
         {
             Console.WriteLine("Playing audio...");
 
             //WaveOutEvent oldevent = audioHandler;
+            //AudioFileReader afl = new AudioFileReader(usedAudioDef.audioFilePath);
+            //oldevent.Init(afl);
+            //audioHandler.Stop();
             //oldWaveOuts.Add(oldevent);
 
             if (SettingsManager.PlaybackSettings.transitionTimingOut == TransitionTiming.onPlay)
             {
                 if(audioHandler != null)
                 {
-                    StartAudioTransition(false);
+                    string outputSrcPath = usedAudioDef.audioFilePath;
+                    StartAudioTransition(false, outputSrcPath);
                     //PerformCustomFadeOut(oldWaveOuts[0]);
                 }
             }
@@ -257,9 +293,10 @@ namespace WaveZtream
 
                     waveOut.Init(audioFileReader);
 
-                    oldWaveOuts.Add(waveOut);
+                    oldWaveOuts.Add(new OutputIDf { waveOutput = waveOut, source = loadedBufferItem.audioDefinition.audioFilePath });
+                    //MusicPanel.instance.AddWaveOutputToList(loadedAudioBuffers[0].audioDefinition.audioFilePath);
 
-                    if(audioHandler == null)
+                    if (audioHandler == null)
                     {
                         Console.WriteLine("Loading the next audio from the buffered queue...");
 
@@ -362,6 +399,9 @@ namespace WaveZtream
                     //audioStreamReader = audioFileReader;
 
                     waveOut.Init(audioFileReader);
+
+                    oldWaveOuts.Add(new OutputIDf { waveOutput = waveOut, source = loadedBufferItem.audioDefinition.audioFilePath });
+                    //MusicPanel.instance.AddWaveOutputToList(loadedAudioBuffers[0].audioDefinition.audioFilePath);
 
                     if (audioHandler == null)
                     {
@@ -564,6 +604,11 @@ namespace WaveZtream
 
     }
 
+    public class OutputIDf
+    {
+        public WaveOutEvent waveOutput;
+        public string source;
+    }
 
     public class AudioBufferQueueItem
     {

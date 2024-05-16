@@ -298,6 +298,16 @@ namespace WaveZtream
             // Load with autoplay
             PlaybackManager.AutoPlayNextAudioFromBuffer();
         }
+
+        public void AddWaveOutputToList(string fpath)
+        {
+            listBox1.Items.Add(fpath);
+        }
+
+        public void RemoveWaveOutputFromList(string fpath)
+        {
+            listBox1.Items.Remove(fpath);
+        }
     }
 
     public class AudioDefinition
