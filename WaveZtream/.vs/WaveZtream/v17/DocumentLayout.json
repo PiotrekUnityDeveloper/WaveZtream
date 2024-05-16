@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\audiotransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\musicpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\musicpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|c:\\users\\piotr\\desktop\\waveztream\\waveztream\\waveztream\\audiotransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\audiotransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|c:\\users\\piotr\\desktop\\waveztream\\waveztream\\waveztream\\playbackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\playbackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\playbackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -28,10 +32,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\queuemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\queuemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\musicpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\musicpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\programmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -108,9 +108,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\control_accounteditor.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\control_accounteditor.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|c:\\users\\piotr\\desktop\\waveztream\\waveztream\\waveztream\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|a54ad834-9219-4aa6-b589-607af21c3e26"
     }
   ],
   "DocumentGroupContainers": [
@@ -120,7 +117,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -128,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AudioTransition.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\AudioTransition.cs",
               "RelativeDocumentMoniker": "WaveZtream\\AudioTransition.cs",
@@ -141,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SettingsManager.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\SettingsManager.cs",
               "RelativeDocumentMoniker": "WaveZtream\\SettingsManager.cs",
@@ -149,8 +146,7 @@
               "RelativeToolTip": "WaveZtream\\SettingsManager.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAowCcAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T18:44:48.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-04T18:44:48.769Z"
             },
             {
               "$type": "Document",
@@ -162,8 +158,7 @@
               "RelativeToolTip": "WaveZtream\\ProgramManager.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAABQwCcAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T19:19:38.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T19:19:38.949Z"
             },
             {
               "$type": "Document",
@@ -192,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "QueueManager.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\QueueManager.cs",
               "RelativeDocumentMoniker": "WaveZtream\\QueueManager.cs",
@@ -200,8 +195,7 @@
               "RelativeToolTip": "WaveZtream\\QueueManager.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAawIwAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T22:12:52.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-28T22:12:52.334Z"
             },
             {
               "$type": "Document",
@@ -226,24 +220,22 @@
               "RelativeToolTip": "WaveZtream\\WaveUtils.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwBcAAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T22:23:36.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-24T22:23:36.974Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "WaveZtream",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\WaveZtream.csproj",
               "RelativeDocumentMoniker": "WaveZtream\\WaveZtream.csproj",
               "ToolTip": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\WaveZtream.csproj",
               "RelativeToolTip": "WaveZtream\\WaveZtream.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-24T21:04:50.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-24T21:04:50.35Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "LibraryManager.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\LibraryManager.cs",
               "RelativeDocumentMoniker": "WaveZtream\\LibraryManager.cs",
@@ -251,8 +243,7 @@
               "RelativeToolTip": "WaveZtream\\LibraryManager.cs",
               "ViewState": "AQIAAMgAAAAAAAAAAAAcwMMAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T20:03:26.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-24T20:03:26.354Z"
             },
             {
               "$type": "Document",
@@ -268,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PlaybackManager.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\PlaybackManager.cs",
               "RelativeDocumentMoniker": "WaveZtream\\PlaybackManager.cs",
@@ -276,12 +267,11 @@
               "RelativeToolTip": "WaveZtream\\PlaybackManager.cs",
               "ViewState": "AQIAAA4CAAAAAAAAAAAiwHgCAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T11:43:07.392Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-24T11:43:07.392Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MusicPanel.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\MusicPanel.cs",
               "RelativeDocumentMoniker": "WaveZtream\\MusicPanel.cs",
@@ -294,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "MusicPanel.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\MusicPanel.cs",
               "RelativeDocumentMoniker": "WaveZtream\\MusicPanel.cs",
@@ -314,8 +304,7 @@
               "RelativeToolTip": "WaveZtream\\Control_AccountEditor.cs",
               "ViewState": "AQIAALgAAAAAAAAAAAAqwIgAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-02T13:39:37.564Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-02T13:39:37.564Z"
             },
             {
               "$type": "Document",
@@ -326,8 +315,7 @@
               "ToolTip": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Control_AccountEditor.cs [Design]",
               "RelativeToolTip": "WaveZtream\\Control_AccountEditor.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-02T13:40:51.718Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-02-02T13:40:51.718Z"
             },
             {
               "$type": "Document",
@@ -338,8 +326,7 @@
               "ToolTip": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Initializer.cs [Design]",
               "RelativeToolTip": "WaveZtream\\Initializer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-02T13:47:23.917Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-02-02T13:47:23.917Z"
             },
             {
               "$type": "Document",
@@ -351,8 +338,7 @@
               "RelativeToolTip": "WaveZtream\\Initializer.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAwB8AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-02T13:47:37.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-02T13:47:37.75Z"
             },
             {
               "$type": "Document",
@@ -363,8 +349,7 @@
               "ToolTip": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Initializer_MainAccountEditor.cs [Design]",
               "RelativeToolTip": "WaveZtream\\Initializer_MainAccountEditor.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-02T13:43:19.148Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-02-02T13:43:19.148Z"
             },
             {
               "$type": "Document",
@@ -375,8 +360,7 @@
               "ToolTip": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Initializer_MultipleAccountSetup.cs [Design]",
               "RelativeToolTip": "WaveZtream\\Initializer_MultipleAccountSetup.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-02T13:47:12.854Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-02-02T13:47:12.854Z"
             },
             {
               "$type": "Document",
@@ -388,8 +372,7 @@
               "RelativeToolTip": "WaveZtream\\Initializer_MultipleAccountSetup.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAA5wBoAAABlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-02T13:47:16.625Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-02T13:47:16.625Z"
             },
             {
               "$type": "Document",
@@ -400,8 +383,7 @@
               "ToolTip": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\Control_StringList.cs [Design]",
               "RelativeToolTip": "WaveZtream\\Control_StringList.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-02T13:52:25.563Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-02-02T13:52:25.563Z"
             },
             {
               "$type": "Document",
@@ -413,8 +395,7 @@
               "RelativeToolTip": "WaveZtream\\Control_StringList.cs",
               "ViewState": "AQIAAEkAAAAAAAAAAAAIwFcAAADGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-02T13:52:29.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-02T13:52:29.157Z"
             },
             {
               "$type": "Document",
@@ -426,8 +407,7 @@
               "RelativeToolTip": "WaveZtream\\Initializer_MainAccountEditor.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAwwBwAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-02T13:58:31.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-02T13:58:31.747Z"
             },
             {
               "$type": "Document",
@@ -438,8 +418,7 @@
               "ToolTip": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\StringItem.cs [Design]",
               "RelativeToolTip": "WaveZtream\\StringItem.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-02T13:53:52.376Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-02-02T13:53:52.376Z"
             },
             {
               "$type": "Document",
@@ -451,8 +430,7 @@
               "RelativeToolTip": "WaveZtream\\StringItem.cs",
               "ViewState": "AQIAADgAAAAAAAAAAAAYwE0AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-02T13:53:53.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-02T13:53:53.97Z"
             },
             {
               "$type": "Document",
@@ -464,8 +442,7 @@
               "RelativeToolTip": "WaveZtream\\Control_AccountEditor.Designer.cs",
               "ViewState": "AQIAABMAAAAAAAAAAABRwBYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-02T13:40:55.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-02T13:40:55.69Z"
             }
           ]
         }

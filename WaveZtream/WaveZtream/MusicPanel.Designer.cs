@@ -88,6 +88,8 @@
             this.olvColumn2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn3 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn4 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.kryptonPage6 = new Krypton.Navigator.KryptonPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.loadAudioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playAudioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -140,8 +142,6 @@
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.tieAMusicVideoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new Accord.Controls.PictureBox();
-            this.kryptonPage6 = new Krypton.Navigator.KryptonPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDockableNavigator1)).BeginInit();
             this.kryptonDockableNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
@@ -182,10 +182,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage5)).BeginInit();
             this.kryptonPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView2)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage6)).BeginInit();
             this.kryptonPage6.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonDockableNavigator1
@@ -467,7 +467,7 @@
             // 
             this.fileNameColumn.AspectName = "audioFileName";
             this.fileNameColumn.Text = "File Name";
-            this.fileNameColumn.Width = 91;
+            this.fileNameColumn.Width = 95;
             // 
             // fileExtension
             // 
@@ -580,7 +580,7 @@
             this.kryptonPage5,
             this.kryptonPage6});
             this.kryptonDockableNavigator2.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007BlackDarkMode;
-            this.kryptonDockableNavigator2.SelectedIndex = 3;
+            this.kryptonDockableNavigator2.SelectedIndex = 0;
             this.kryptonDockableNavigator2.Size = new System.Drawing.Size(443, 619);
             this.kryptonDockableNavigator2.TabIndex = 5;
             this.kryptonDockableNavigator2.Text = "kryptonDockableNavigator2";
@@ -721,6 +721,27 @@
             this.olvColumn4.AspectName = "audioFileName";
             this.olvColumn4.Text = "File Name";
             this.olvColumn4.Width = 103;
+            // 
+            // kryptonPage6
+            // 
+            this.kryptonPage6.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage6.Controls.Add(this.listBox1);
+            this.kryptonPage6.Flags = 65534;
+            this.kryptonPage6.LastVisibleSet = true;
+            this.kryptonPage6.MinimumSize = new System.Drawing.Size(150, 50);
+            this.kryptonPage6.Name = "kryptonPage6";
+            this.kryptonPage6.Size = new System.Drawing.Size(441, 592);
+            this.kryptonPage6.Text = "Debug";
+            this.kryptonPage6.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage6.UniqueName = "6598aaa0dc2f4493b668a5f3054726d8";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(131, 178);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(166, 251);
+            this.listBox1.TabIndex = 0;
             // 
             // contextMenuStrip1
             // 
@@ -1113,27 +1134,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
             // 
-            // kryptonPage6
-            // 
-            this.kryptonPage6.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage6.Controls.Add(this.listBox1);
-            this.kryptonPage6.Flags = 65534;
-            this.kryptonPage6.LastVisibleSet = true;
-            this.kryptonPage6.MinimumSize = new System.Drawing.Size(150, 50);
-            this.kryptonPage6.Name = "kryptonPage6";
-            this.kryptonPage6.Size = new System.Drawing.Size(441, 592);
-            this.kryptonPage6.Text = "Debug";
-            this.kryptonPage6.ToolTipTitle = "Page ToolTip";
-            this.kryptonPage6.UniqueName = "6598aaa0dc2f4493b668a5f3054726d8";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(131, 178);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(166, 251);
-            this.listBox1.TabIndex = 0;
-            // 
             // MusicPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1188,10 +1188,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage5)).EndInit();
             this.kryptonPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.objectListView2)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage6)).EndInit();
             this.kryptonPage6.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
