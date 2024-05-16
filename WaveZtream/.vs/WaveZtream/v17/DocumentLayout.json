@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\musicpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\settingsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\settingsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|c:\\users\\piotr\\desktop\\waveztream\\waveztream\\waveztream\\musicpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\musicpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|c:\\users\\piotr\\desktop\\waveztream\\waveztream\\waveztream\\audiotransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\audiotransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\audiotransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\playbackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\playbackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\settingsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|solutionrelative:waveztream\\settingsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36B894DA-DF32-4867-8D4E-A53694F6C791}|WaveZtream\\WaveZtream.csproj|C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\waveztream\\musicpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -117,7 +117,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -125,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AudioTransition.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\AudioTransition.cs",
               "RelativeDocumentMoniker": "WaveZtream\\AudioTransition.cs",
@@ -133,20 +133,20 @@
               "RelativeToolTip": "WaveZtream\\AudioTransition.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAkwDUAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T11:46:05.738Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-13T11:46:05.738Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "SettingsManager.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\SettingsManager.cs",
               "RelativeDocumentMoniker": "WaveZtream\\SettingsManager.cs",
               "ToolTip": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\SettingsManager.cs",
               "RelativeToolTip": "WaveZtream\\SettingsManager.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAowCcAAAA5AAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA5wCcAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T18:44:48.769Z"
+              "WhenOpened": "2024-05-04T18:44:48.769Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -259,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PlaybackManager.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\PlaybackManager.cs",
               "RelativeDocumentMoniker": "WaveZtream\\PlaybackManager.cs",
@@ -284,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MusicPanel.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\WaveZtream\\WaveZtream\\WaveZtream\\MusicPanel.cs",
               "RelativeDocumentMoniker": "WaveZtream\\MusicPanel.cs",
