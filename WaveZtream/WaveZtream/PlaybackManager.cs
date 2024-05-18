@@ -210,7 +210,8 @@ namespace WaveZtream
                 if(audioHandlers.Count > 0)
                 {
                     //string outputSrcPath = usedAudioDef.audioFilePath;
-
+                    
+                    //StartAudioTransition(false, (AudioDefinition)usedAudioDef.DeepClone());
                     StartAudioTransition(false, usedAudioDef);
                     //PerformCustomFadeOut(oldWaveOuts[0]);
                 }

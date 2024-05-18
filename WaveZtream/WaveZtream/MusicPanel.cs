@@ -310,6 +310,7 @@ namespace WaveZtream
         }
     }
 
+    //[Serializable]
     public class AudioDefinition
     {
         public int index = 0;
