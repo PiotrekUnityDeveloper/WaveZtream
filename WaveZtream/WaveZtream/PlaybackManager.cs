@@ -100,6 +100,7 @@ namespace WaveZtream
 
         public static AudioOutput GetOutputByAudioDefinition(AudioDefinition def)
         {
+            /*
             foreach(AudioOutput ao in audioHandlers)
             {
                 if(ao.definition == def)
@@ -109,6 +110,19 @@ namespace WaveZtream
             }
 
             return null;
+            */
+
+            for (int i = audioHandlers.Count - 1; i >= 0; i--)
+            {
+                AudioOutput ao = audioHandlers[i];
+                if (ao.definition.audioFilePath == def.audioFilePath)
+                {
+                    return ao;
+                }
+            }
+
+            return null;
+
         }
 
         public static void StartAudioTransition(bool In, AudioDefinition targetdef = null)
