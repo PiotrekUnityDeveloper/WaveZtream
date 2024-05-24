@@ -21,7 +21,7 @@ namespace WaveZtream
             {
                 new CustomLibrary(){ libraryName = "DefaultWindowsMusicPath",
                     libraryAudioPath = "C:\\Users\\Piotr\\Music",
-                    librarySearchOption = SearchOption.AllDirectories },
+                    librarySearchOption = SearchOption.TopDirectoryOnly },
             }
         };
 
