@@ -11,6 +11,8 @@ namespace WaveZtream
 {
     internal class AudioTransition
     {
+        private static List<VolumeFadeIn> activeFadeIns = new List<VolumeFadeIn>();
+
         public class VolumeFadeOut
         {
             private readonly WaveOutEvent waveOut;
@@ -64,20 +66,27 @@ namespace WaveZtream
                     waveReader.Volume = targetVolume;
 
                     // Stop the playback after fade out
-                    //waveOut.Stop();
+                    waveOut.Stop();
+                    waveOut.Dispose();
+                    this.waveReader.Dispose();
                 });
             }
         }
 
         public class VolumeFadeIn
         {
-            private readonly WaveOutEvent waveOut;
+            public readonly WaveOutEvent waveOut;
             private readonly AudioFileReader waveReader;
             private readonly float initialVolume;
             private readonly float targetVolume;
             private readonly TimeSpan duration;
             private readonly int fadeSteps;
             private const float VolumeThreshold = 0.01f; // Adjust as needed
+            
+            public bool isRunning = false;
+
+            private CancellationTokenSource cancellationTokenSource;
+            private CancellationToken cancellationToken;
 
             public VolumeFadeIn(WaveOutEvent waveOut, TimeSpan duration, AudioFileReader reader)
             {
@@ -87,12 +96,18 @@ namespace WaveZtream
                 this.initialVolume = 0.0f;
                 this.targetVolume = 1.0f;
                 this.fadeSteps = 100; // Adjust as needed for smoother or quicker fade
+
+                cancellationTokenSource = new CancellationTokenSource();
+                cancellationToken = cancellationTokenSource.Token;
             }
 
             public async void Start()
             {
                 await Task.Run(() =>
                 {
+                    AudioTransition.activeFadeIns.Add(this);
+                    isRunning = true;
+
                     float stepSize = (targetVolume - initialVolume) / fadeSteps;
                     TimeSpan stepDuration = TimeSpan.FromTicks(duration.Ticks / fadeSteps);
 
@@ -103,6 +118,11 @@ namespace WaveZtream
 
                     for (int i = 0; i < fadeSteps; i++)
                     {
+                        if (cancellationToken.IsCancellationRequested)
+                        {
+                            break;
+                        }
+
                         if (Math.Abs(waveReader.Volume - targetVolume) < VolumeThreshold)
                         {
                             break;
@@ -115,10 +135,37 @@ namespace WaveZtream
                         Thread.Sleep(stepDuration);
                     }
 
-                    // Ensure the volume reaches the target volume exactly
-                    waveReader.Volume = targetVolume;
+
+                    if (!cancellationToken.IsCancellationRequested)
+                    {
+                        // Ensure the volume reaches the target volume exactly
+                        waveReader.Volume = targetVolume;
+                    }
+
+                    isRunning = false;
+                    AudioTransition.activeFadeIns.Remove(this);
                 });
             }
+
+            public void CancelFadeIn()
+            {
+                cancellationTokenSource.Cancel();
+            }
+        }
+
+        public static bool isVolumeTransitionInRunning(WaveOutEvent id, out VolumeFadeIn targetOutput)
+        {
+            foreach(VolumeFadeIn vfi in activeFadeIns)
+            {
+                if(vfi.waveOut == id)
+                {
+                    targetOutput = vfi;
+                    return true;
+                }
+            }
+
+            targetOutput = null;
+            return false;
         }
     }
 }

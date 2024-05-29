@@ -98,6 +98,11 @@ namespace WaveZtream
             return PlaybackManager.audioHandlers[PlaybackManager.audioHandlers.Count - 1];
         }
 
+        public static bool IsAudioHandleListEmpty()
+        {
+            return PlaybackManager.audioHandlers.Count == 0 ? true : false;
+        }
+
         public static AudioOutput GetOutputByAudioDefinition(AudioDefinition def)
         {
             /*
@@ -262,6 +267,17 @@ namespace WaveZtream
 
             loadedAudioBuffers.Remove(bufferItem);
             Console.WriteLine("Playing a new buffered audio");
+        }
+
+        public static void ClearRequestBuffers()
+        {
+            for (int i = 0; i < loadedAudioBuffers.Count; i++)
+            {
+                if (loadedAudioBuffers[i].GetType() == typeof(RequestBuffer))
+                {
+                    loadedAudioBuffers.Remove(loadedAudioBuffers[i]);
+                }
+            }
         }
 
         public static void AddAudioToBuffer(AudioDefinition audio, AudioBufferQueueItem bufferListType)
@@ -548,11 +564,20 @@ namespace WaveZtream
 
         public static AudioBufferQueueItem GetFirstMatchingBuffer(AudioBufferStatus targetStatus, List<AudioBufferQueueItem> bufferList)
         {
-            foreach (AudioBufferQueueItem audbuffer in loadedAudioBuffers)
+            /*
+            foreach (AudioBufferQueueItem audbuffer in loadedAudioBuffers) // CAUSES ENUMERATION ERROR
             {
                 if(audbuffer.bufferStatus == targetStatus)
                 {
-                    return audbuffer;
+                    return audbuffer; 
+                }
+            }*/
+
+            for (int i = 0; i < loadedAudioBuffers.Count; i++)
+            {
+                if (loadedAudioBuffers[i].bufferStatus == targetStatus)
+                {
+                    return loadedAudioBuffers[i];
                 }
             }
 

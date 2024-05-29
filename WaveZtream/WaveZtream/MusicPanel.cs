@@ -288,10 +288,25 @@ namespace WaveZtream
 
         private async void AutoPlay()
         {
+            // Clear the current request buffer
+            PlaybackManager.ClearRequestBuffers();
+
+            if (!PlaybackManager.IsAudioHandleListEmpty())
+            {
+                AudioTransition.VolumeFadeIn activeFadeInTransition;
+                if (AudioTransition.isVolumeTransitionInRunning(PlaybackManager.GetLatestOutput().output, out activeFadeInTransition))
+                {
+                    if (activeFadeInTransition != null)
+                    {
+                        activeFadeInTransition.CancelFadeIn();
+                    }
+                }
+            }
+
             // Add to buffer
             AudioDefinition newdef = LibraryManager.GetDefinitionByIndex(Convert.ToInt32(objectListView1.FocusedItem.SubItems[0].Text));
             PlaybackManager.AddAudioToBuffer(newdef, new RequestBuffer());
-            //QueueManager.SortQueuedBuffers();
+            QueueManager.SortQueuedBuffers();
 
             await Task.Delay(500);
 
