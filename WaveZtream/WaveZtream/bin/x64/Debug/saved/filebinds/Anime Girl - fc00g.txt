@@ -1,0 +1,2 @@
+local:C:\Users\Piotr\Music\kossakowski - Anime Girl.wav
+lyric:C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\saved\filebinds\Anime Girl - fc00g
