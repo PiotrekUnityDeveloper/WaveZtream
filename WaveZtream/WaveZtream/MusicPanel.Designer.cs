@@ -141,7 +141,6 @@
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.tieAMusicVideoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new Accord.Controls.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDockableNavigator1)).BeginInit();
             this.kryptonDockableNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
@@ -185,7 +184,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage6)).BeginInit();
             this.kryptonPage6.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonDockableNavigator1
@@ -1123,17 +1121,6 @@
             this.tieAMusicVideoToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
             this.tieAMusicVideoToolStripMenuItem.Text = "Tie A Music Video";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = null;
-            this.pictureBox1.Location = new System.Drawing.Point(452, 468);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 103);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
-            // 
             // MusicPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1141,11 +1128,11 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1089, 648);
             this.Controls.Add(this.kryptonPanel5);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.radDock1);
             this.Name = "MusicPanel";
             this.Text = "MusicPanel";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MusicPanel_FormClosing);
             this.Load += new System.EventHandler(this.MusicPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDockableNavigator1)).EndInit();
             this.kryptonDockableNavigator1.ResumeLayout(false);
@@ -1191,7 +1178,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage6)).EndInit();
             this.kryptonPage6.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1212,7 +1198,6 @@
         private BrightIdeasSoftware.OLVColumn fileNameColumn;
         private BrightIdeasSoftware.OLVColumn fileExtension;
         private BrightIdeasSoftware.OLVColumn indexColumn;
-        private Accord.Controls.PictureBox pictureBox1;
         private System.Windows.Forms.Timer audioUpdate;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox5;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox4;

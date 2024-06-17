@@ -211,6 +211,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AudioContentLoadingDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AudioContentLoadingDialog.Designer.cs">
+      <DependentUpon>AudioContentLoadingDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="AudioTransition.cs" />
     <Compile Include="Control_AccountEditor.cs">
       <SubType>UserControl</SubType>
@@ -270,6 +276,9 @@
       <DependentUpon>StringItem.cs</DependentUpon>
     </Compile>
     <Compile Include="WaveUtils.cs" />
+    <EmbeddedResource Include="AudioContentLoadingDialog.resx">
+      <DependentUpon>AudioContentLoadingDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control_AccountEditor.resx">
       <DependentUpon>Control_AccountEditor.cs</DependentUpon>
     </EmbeddedResource>

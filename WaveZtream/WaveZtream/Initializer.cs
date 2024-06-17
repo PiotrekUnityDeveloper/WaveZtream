@@ -30,7 +30,14 @@ namespace WaveZtream
             MusicPanel musicPanel = new MusicPanel();
             musicPanel.Show();
             this.Hide();
+            this.ShowInTaskbar = false;
+            this.Opacity = 10;
             //Initialize();
+        }
+
+        public void ExitApplication()
+        {
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)

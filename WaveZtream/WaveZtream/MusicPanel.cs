@@ -38,6 +38,9 @@ namespace WaveZtream
         public static List<Image> covers = new List<Image>();
         public static AudioDefinition currentDefinition = null;
 
+        private DocumentWindow myAudioWindow;
+        private DocumentWindow playbackManagerWindow;
+
         private void MusicPanel_Load(object sender, EventArgs e)
         {
             //AllocConsole();
@@ -51,6 +54,7 @@ namespace WaveZtream
             // My Audio Window
             DocumentWindow myAudio = new DocumentWindow();
             radDock1.AddDocument(myAudio);
+            myAudioWindow = myAudio;
             myAudio.Show();
             myAudio.Controls.Add(kryptonPanel5);
             //myAudio.Controls.Add(kryptonButton5);
@@ -70,6 +74,7 @@ namespace WaveZtream
             // Playback Manager Window
             DocumentWindow playbackManager = new DocumentWindow();
             radDock1.AddDocument(playbackManager);
+            playbackManagerWindow = playbackManager;
             playbackManager.Show();
             playbackManager.Controls.Add(kryptonPanel1);
             playbackManager.Text = "Playback Manager";
@@ -94,6 +99,14 @@ namespace WaveZtream
             myAudio.TabStrip.SizeInfo.RelativeRatio = new SizeF(0.43f, 0);
 
             //objectListView1.SmallImageList.ImageSize = new Size(16, 16);
+        }
+
+        public AudioContentLoadingDialog AddAudioLoadingDialog()
+        {
+            AudioContentLoadingDialog loading = new AudioContentLoadingDialog();
+            loading.Parent = myAudioWindow;
+            loading.BringToFront();
+            return loading;
         }
 
         public async void Start()
@@ -322,6 +335,11 @@ namespace WaveZtream
         public void RemoveWaveOutputFromList(string fpath)
         {
             listBox1.Items.Remove(fpath);
+        }
+
+        private void MusicPanel_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Initializer.activeInitializer.ExitApplication();
         }
     }
 

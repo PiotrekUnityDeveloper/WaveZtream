@@ -90,3 +90,4 @@ C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.Wi
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.Themes.TelerikMetroBlue.dll
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.Themes.VisualStudio2012Dark.dll
 C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\bin\x64\Debug\Telerik.WinControls.Themes.Windows7.dll
+C:\Users\Piotr\Desktop\WaveZtream\WaveZtream\WaveZtream\obj\x64\Debug\WaveZtream.AudioContentLoadingDialog.resources

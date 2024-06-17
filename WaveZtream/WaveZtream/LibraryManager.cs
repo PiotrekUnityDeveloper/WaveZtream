@@ -29,6 +29,19 @@ namespace WaveZtream
 
         public static async Task GetAudioFiles()
         {
+            AudioContentLoadingDialog audDialog = MusicPanel.instance.AddAudioLoadingDialog();
+
+            //audDialog.Parent = MusicPanel.instance.my
+
+            int fileCount = 0;
+            foreach (CustomLibrary s in mainLibrary.customLibraries)
+            {
+                fileCount += Directory.GetFiles(s.libraryAudioPath).Length;
+            }
+
+            //int fileCount = Directory.GetFiles(directoryPath, fileExtension).Length;
+            audDialog.InitAudioList(fileCount);
+
             await Task.Run(() => {
 
                 int index = 0;
@@ -82,20 +95,7 @@ namespace WaveZtream
                                 artists = string.Join(", ", audioFile.Tag.Performers);
                             }
 
-                            try
-                            {
-                                MemoryStream ms = new MemoryStream(audioFile.Tag.Pictures[0].Data.Data);
-                                System.Drawing.Image image = System.Drawing.Image.FromStream(ms);
-                                audioCover = image;
-
-                                MusicPanel.instance.Invoke((MethodInvoker)delegate
-                                {
-                                    ShowCurrentCover(image);
-                                });
-
-                                MusicPanel.covers.Add(WaveUtils.ResizeImage(image, 6, 6));
-                            }
-                            catch { }
+                            //
                         }
                         catch (Exception ex)
                         {
@@ -157,6 +157,34 @@ namespace WaveZtream
                             audioFilePath = file,
                             audioFileExtension = Path.GetExtension(file),
                         });
+
+                        try
+                        {
+                            //MemoryStream ms = new MemoryStream(audioFile.Tag.Pictures[0].Data.Data);
+                            //System.Drawing.Image image = System.Drawing.Image.FromStream(ms);
+                            //audioCover = image;
+
+                            MusicPanel.instance.Invoke((MethodInvoker)delegate
+                            {
+                                //ShowCurrentCover(image);
+                                audDialog.UpdateAudioData(new AudioDefinition
+                                {
+                                    audioFileName = Path.GetFileName(file),
+                                    audioCover = audioCover,
+                                    audioTitle = title,
+                                    audioArtists = artists,
+                                    //misc
+                                    usesMeta = usesmeta,
+                                    wasSeparated = wasseparated,
+                                    index = index,
+                                    audioFilePath = file,
+                                    audioFileExtension = Path.GetExtension(file),
+                                });
+                            });
+
+                            //MusicPanel.covers.Add(WaveUtils.ResizeImage(image, 6, 6));
+                        }
+                        catch { }
 
                         index++;
 
